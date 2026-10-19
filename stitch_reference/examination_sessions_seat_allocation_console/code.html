@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#93000a","primary":"#082135","surface-tint":"#4b6077","surface-container":"#e7eff8","inverse-primary":"#b2c9e3","outline-variant":"#c3c7cd","on-primary-container":"#899fb8","on-tertiary-fixed":"#161d19","secondary":"#3b6751","surface-container-low":"#edf4fe","primary-fixed-dim":"#b2c9e3","on-secondary-fixed-variant":"#234f3b","on-secondary-fixed":"#002113","surface-container-high":"#e1e9f2","inverse-on-surface":"#eaf2fb","tertiary-fixed":"#dce4de","on-background":"#151c23","on-primary":"#ffffff","on-tertiary-fixed-variant":"#414944","inverse-surface":"#293138","on-tertiary":"#ffffff","on-tertiary-container":"#979f99","tertiary":"#19211d","tertiary-fixed-dim":"#c0c8c2","on-error":"#ffffff","surface-container-highest":"#dbe3ec","background":"#f6f9ff","on-primary-fixed-variant":"#33495e","outline":"#74777d","primary-fixed":"#cfe5ff","on-surface-variant":"#43474c","surface-dim":"#d3dbe4","surface-variant":"#dbe3ec","on-primary-fixed":"#041d31","on-secondary-container":"#3f6b55","on-secondary":"#ffffff","surface":"#f6f9ff","error-container":"#ffdad6","secondary-container":"#baebcf","surface-bright":"#f6f9ff","secondary-fixed":"#bdedd2","primary-container":"#20364b","on-surface":"#151c23","secondary-fixed-dim":"#a2d1b6","tertiary-container":"#2e3631","surface-container-lowest":"#ffffff","error":"#ba1a1a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","space-xl":"2rem","gutter-desktop":"1.5rem","margin-tablet":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1rem","margin-desktop":"2rem","margin":"1rem"},fontFamily:{"label-sm":["Public Sans"],"label-md":["Public Sans"],"body-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"body-sm":["Public Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Public Sans"],"headline-md":["Public Sans"],"headline-xl":["Public Sans"],"body-md":["Public Sans"]},fontSize:{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[248px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(32,54,75,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="PakCampusAssess Institutional Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XPA3GhxpteIRiyC5IF2_hH-dLr9Dj7PrDQQySz-4DfW8Mf9u1P1fAmxvdQp6ZeWfg9LxA2_1oF82UzLDSpnLWRS078dcs45lMBXIbjwVpSEVSqnRxP6ZLWDc3D-DX5D1yq6Ij7TDMVNLe6qyEb0QGFfIqmtxMxPdj6dbS6t308tuZloW6mQo57qFupIsgzO4h1HcEgTjHtElK0BvIdjGJW6d3KARfy2rJKVJnxogHKsE4aON1bSfN2hvMN"/><div class="flex flex-col"><span class="font-headline-md text-body-sm font-bold tracking-tight text-primary leading-tight">PakCampusAssess</span><span class="font-code-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ministry Portal</span></div></div><div class="px-space-md py-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-secondary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wide font-semibold">National Session Active</span></div></div><nav class="flex flex-col px-space-xs gap-y-4 pb-space-lg" data-active-classes="bg-primary text-on-primary font-medium rounded-lg shadow-sm"><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">1. Core</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-code-sm text-label-sm">12</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-label-md text-label-md">Audit Logs</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">2. Examination Ops</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="test-categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-label-md text-label-md">Test Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="question-bank" href="#"><span class="material-symbols-outlined text-[18px]">quiz</span><span class="font-label-md text-label-md">Question Bank</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="assessment-blueprints" href="#"><span class="material-symbols-outlined text-[18px]">architecture</span><span class="font-label-md text-label-md">Assessment Blueprints</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examination-sessions" href="#"><span class="material-symbols-outlined text-[18px]">event_available</span><span class="font-label-md text-label-md">Examination Sessions</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-registrations" href="#"><span class="material-symbols-outlined text-[18px]">person_add</span><span class="font-label-md text-label-md">Candidate Registrations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seat-allocation" href="#"><span class="material-symbols-outlined text-[18px]">event_seat</span><span class="font-label-md text-label-md">Seat Allocation</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">3. Infrastructure &amp; Staff</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="centers-and-universities" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span class="font-label-md text-label-md">Centers &amp; Universities</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="labs-and-workstations" href="#"><span class="material-symbols-outlined text-[18px]">computer</span><span class="font-label-md text-label-md">Labs &amp; Workstations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ip-authorization" href="#"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-label-md text-label-md">IP Authorization</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examiner-management" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-label-md text-label-md">Examiner Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="live-exam-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">videocam</span><span class="font-label-md text-label-md">Live Exam Monitoring</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">4. Results &amp; Merit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="results-and-scoring" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-label-md text-label-md">Results &amp; Scoring</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="merit-policies" href="#"><span class="material-symbols-outlined text-[18px]">policy</span><span class="font-label-md text-label-md">Merit Policies</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="applications-and-verification" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span class="font-label-md text-label-md">Applications &amp; Verification</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="merit-lists-and-publication" href="#"><span class="material-symbols-outlined text-[18px]">leaderboard</span><span class="font-label-md text-label-md">Merit Lists &amp; Publication</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">5. Settings</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-label-md text-label-md">System Settings</span></a></div></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm font-semibold uppercase">Helpline: 0800-CAMPUS</span><button class="hover:text-primary" type="button"><span class="material-symbols-outlined text-[16px]">first_page</span></button></div><div class="flex items-center justify-between font-code-sm text-label-sm text-outline"><span class="truncate">PakCampusAssess OS</span><span>v2.4.1-rc</span></div></div></aside><div class="pl-[248px]"><header class="fixed top-0 left-[248px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(32,54,75,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-1 max-w-sm"><div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant overflow-hidden whitespace-nowrap"><span class="font-semibold text-primary">PakCampusAssess</span><span class="text-outline">/</span><span>Super Admin</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Overview</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container px-3 py-1.5 rounded-lg text-on-surface-variant focus-within:ring-1 focus-within:ring-secondary"><span class="material-symbols-outlined text-[18px] mr-2 text-outline">search</span><input class="w-full bg-transparent font-body-sm text-body-sm focus:outline-none placeholder:text-outline text-on-surface" placeholder="Search candidates, roll #, test sessions..." type="text"/><kbd class="font-code-sm text-label-sm bg-surface-container-lowest px-1.5 py-0.5 rounded text-on-surface-variant shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>All Systems Operational</span></div><div class="flex items-center bg-surface-container-low px-2 py-1 rounded-lg"><label class="sr-only" for="role-switcher">Switch Role</label><select class="bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer pr-1" id="role-switcher"><option selected="">Super Administrator</option><option>Student</option><option>Examiner</option><option>University Admissions</option></select></div><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md font-semibold text-primary leading-tight">Dr. Tariq Mansoor</span><span class="font-code-sm text-label-sm text-on-surface-variant">Exam Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgTwsGPYOHGhvqwxWqktGhuAfDlgCyr2MTDHKk71SjBtDae-k3J7R8V1eLdSFm1LDHXetNbpqVzsMpML2xH1GL39Hb-AVrW7h8kh--MjKnxMes3GKMtwkd6QRQS9Y-nNvHgP1CjLTPQLnoOVD9k6776-8x90lUvpogFMlkaeCFXRAJ7rasipqd5yizfCJ4qnIhXV4UFegxVSQDY7sLmpp7hzscCXB-EBl85n1Z7vH-fqHGVPT0JNwtsA"/></div></div></header><main class="relative pt-16 min-h-screen w-full px-gutter-desktop py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- Top Context Header & Actions Bar -->
+<div class="flex flex-col gap-space-xs pb-space-lg">
+<!-- Breadcrumb Path -->
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">PakCampusAssess</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Examination Ops</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Sessions &amp; Seat Allocation</span>
+</div>
+<!-- Title & Primary Control CTAs -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-1">
+<div class="max-w-3xl">
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+          Examination Sessions &amp; Candidate Seat Allocation Management
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Coordinate test cycles, laboratory capacity schedules, automated seat mapping, and invigilator rosters across 42 nationwide CBT centers.
+        </p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm self-start lg:self-center shrink-0">
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+<span>Export Capacity Report</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>Automated Batch Allocation</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container active:bg-primary transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Schedule New Session</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI Overview Metrics Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Scheduled Sessions</span>
+<span class="p-1 rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[18px]">event_note</span>
+</span>
+</div>
+<div class="mt-3">
+<div class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">18 Active Sessions</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-code-sm text-label-sm mt-0.5">
+<span>Cycle 2027-A</span>
+<span class="text-outline">·</span>
+<span>42 CBT Centers</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-1.5 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>All Centers Live</span>
+<span class="font-code-sm">100% Online</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Seat Capacity Allocated</span>
+<span class="p-1 rounded-full bg-secondary-container/50 text-secondary">
+<span class="material-symbols-outlined text-[18px]">event_seat</span>
+</span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">6,412</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 6,800 Seats</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-2">
+<div class="bg-secondary h-full rounded-full" style="width: 94.3%"></div>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-primary">94.3% Booked</span>
+<span class="font-code-sm text-secondary">388 Spare/Buffer</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Invigilation Roster</span>
+<span class="p-1 rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</span>
+</div>
+<div class="mt-3">
+<div class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">142 / 142</div>
+<div class="text-on-surface-variant font-label-md text-label-md mt-0.5">Examiners Confirmed</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-1.5 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span> Biometric Synced
+        </span>
+<span class="font-code-sm">100% Ready</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Conflicts &amp; Holds</span>
+<span class="p-1 rounded-full bg-secondary-container/40 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="mt-3">
+<div class="font-headline-lg text-headline-lg font-bold text-secondary tracking-tight">0 Unresolved</div>
+<div class="text-on-surface-variant font-label-md text-label-md mt-0.5">No Collisions Detected</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-code-sm">3 Special Accommodations</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-semibold text-primary text-[10px]">ROUTED</span>
+</div>
+</div>
+</div>
+<!-- Main Institutional Workspace Grid (68% Left Main Workspace, 32% Right Detail Drawer) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT MAIN WORKSPACE: 68% (xl:col-span-8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Filter Bar & Quick Category Tabs -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-md">
+<!-- Quick State Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shrink-0 flex items-center gap-2" type="button">
+<span>All Active Sessions</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest/20 rounded font-code-sm text-label-sm">18</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-primary font-label-md text-label-md font-medium shrink-0 flex items-center gap-2" type="button">
+<span>Today's Batches</span>
+<span class="px-1.5 py-0.5 bg-surface-container rounded font-code-sm text-label-sm">6</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-primary font-label-md text-label-md font-medium shrink-0 flex items-center gap-2" type="button">
+<span>Awaiting Roster Sign-Off</span>
+<span class="px-1.5 py-0.5 bg-surface-container rounded font-code-sm text-label-sm">2</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-primary font-label-md text-label-md font-medium shrink-0 flex items-center gap-2" type="button">
+<span>Special Accommodations</span>
+<span class="px-1.5 py-0.5 bg-surface-container rounded font-code-sm text-label-sm">3</span>
+</button>
+</div>
+<!-- Inputs Row -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm pt-1">
+<!-- Text Search Field -->
+<div class="md:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined text-[18px] absolute left-3 text-outline">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all placeholder:text-outline" placeholder="Search Session ID, Center, Test Code..." type="text"/>
+</div>
+<!-- Cycle Selector -->
+<div class="md:col-span-2">
+<label class="sr-only" for="cycle-select">Admission Cycle</label>
+<select class="w-full px-2.5 py-2 bg-surface-container-low text-primary rounded-lg font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer" id="cycle-select">
+<option selected="">UG 2027-A</option>
+<option>UG 2027-B</option>
+<option>Postgrad 2027</option>
+</select>
+</div>
+<!-- Test Category -->
+<div class="md:col-span-2">
+<label class="sr-only" for="cat-select">Category</label>
+<select class="w-full px-2.5 py-2 bg-surface-container-low text-primary rounded-lg font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer" id="cat-select">
+<option selected="">All Tests</option>
+<option>ECAT-CS</option>
+<option>MDCAT</option>
+<option>B-NAT</option>
+<option>G-CAT</option>
+</select>
+</div>
+<!-- Regional Hub -->
+<div class="md:col-span-2">
+<label class="sr-only" for="hub-select">Regional Hub</label>
+<select class="w-full px-2.5 py-2 bg-surface-container-low text-primary rounded-lg font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer" id="hub-select">
+<option selected="">All Hubs</option>
+<option>Islamabad</option>
+<option>Lahore</option>
+<option>Karachi</option>
+<option>Peshawar</option>
+<option>Quetta</option>
+</select>
+</div>
+<!-- Status Filter -->
+<div class="md:col-span-2">
+<label class="sr-only" for="status-select">Status</label>
+<select class="w-full px-2.5 py-2 bg-surface-container-low text-primary rounded-lg font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer" id="status-select">
+<option selected="">All Statuses</option>
+<option>Roster Sealed</option>
+<option>In-Progress</option>
+<option>Allocation Open</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Master Schedule Table Section -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low/40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">calendar_month</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">Master Session Timetable</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Cycle 2027-A</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Reload Roster Table" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Filter Columns" type="button">
+<span class="material-symbols-outlined text-[18px]">view_column</span>
+</button>
+</div>
+</div>
+<!-- Table Responsive Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="h-10 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="px-space-md">Session Ref &amp; Category</th>
+<th class="px-space-md">Center &amp; Laboratory</th>
+<th class="px-space-md">Date &amp; Window</th>
+<th class="px-space-md">Capacity &amp; Fill</th>
+<th class="px-space-md">Chief Invigilator</th>
+<th class="px-space-md">Status</th>
+<th class="px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Selected & Active Row -->
+<tr class="h-14 bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md py-2">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-7 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-code-sm text-label-md font-bold text-primary">EX-2027-0104</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">ECAT-CS Morning Batch</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">NUST Islamabad</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Lab C3A + SEECS Hall</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Feb 18, 2027</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">09:00 - 11:00 AM <span class="text-outline">(Rep: 08:15)</span></span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col w-32">
+<div class="flex justify-between font-code-sm text-label-sm">
+<span class="font-bold text-primary">250/250</span>
+<span class="text-secondary font-semibold">100%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Prof. Haris Munir</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">SEECS Computing</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Sealed
+                  </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary-container transition-all" type="button">
+                    Active Lab Map
+                  </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<td class="px-space-md py-2">
+<div class="flex flex-col pl-3.5">
+<span class="font-code-sm text-label-md font-bold text-primary">EX-2027-0105</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MDCAT Standard Slot 1</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">KEMU Lahore</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Auditorium Labs 1 &amp; 2</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Feb 19, 2027</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">10:00 - 01:30 PM <span class="text-outline">(Rep: 09:00)</span></span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col w-32">
+<div class="flex justify-between font-code-sm text-label-sm">
+<span class="font-bold text-primary">320/320</span>
+<span class="text-secondary font-semibold">100%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Dr. Shahida Parveen</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">KEMU Academic</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px] text-secondary">fingerprint</span> Pre-Synced
+                  </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-all" type="button">
+                    Manage Seats
+                  </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<td class="px-space-md py-2">
+<div class="flex flex-col pl-3.5">
+<span class="font-code-sm text-label-md font-bold text-primary">EX-2027-0106</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">B-NAT Business Analytics</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">IBA Karachi</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">City Campus Lab 1</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Feb 20, 2027</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">02:00 - 04:30 PM <span class="text-outline">(Rep: 01:15)</span></span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col w-32">
+<div class="flex justify-between font-code-sm text-label-sm">
+<span class="font-bold text-primary">185/200</span>
+<span class="text-on-surface-variant">92.5%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full" style="width: 92.5%"></div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Dr. Zeeshan Haider</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">Dean Computer Sci</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                    Allocation Open
+                  </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-all" type="button">
+                    Manage Seats
+                  </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<td class="px-space-md py-2">
+<div class="flex flex-col pl-3.5">
+<span class="font-code-sm text-label-md font-bold text-primary">EX-2027-0107</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">G-CAT General Science</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">UET Peshawar</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Main Computer Center Lab 02</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Feb 21, 2027</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">09:00 - 11:30 AM <span class="text-outline">(Rep: 08:30)</span></span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col w-32">
+<div class="flex justify-between font-code-sm text-label-sm">
+<span class="font-bold text-primary">140/150</span>
+<span class="text-on-surface-variant">93.3%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full" style="width: 93.3%"></div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Engr. Kamran Khan</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">UET Faculty Ops</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                    Allocation Open
+                  </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-all" type="button">
+                    Manage Seats
+                  </button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<td class="px-space-md py-2">
+<div class="flex flex-col pl-3.5">
+<span class="font-code-sm text-label-md font-bold text-primary">EX-2027-0108</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ECAT-CS Afternoon Slot</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">NED Karachi</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">IT Center Hall A</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Feb 22, 2027</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">02:00 - 04:00 PM <span class="text-outline">(Rep: 01:15)</span></span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col w-32">
+<div class="flex justify-between font-code-sm text-label-sm">
+<span class="font-bold text-primary">280/280</span>
+<span class="text-secondary font-semibold">100%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Prof. Asim Farooq</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">NED Engineering</span>
+</div>
+</td>
+<td class="px-space-md py-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Sealed
+                  </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-all" type="button">
+                    Manage Seats
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="px-space-md py-3 bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Showing <strong>1-5</strong> of 18 scheduled sessions</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container text-primary font-medium disabled:opacity-50" disabled="" type="button">Previous</button>
+<span class="px-2 py-1 rounded bg-primary text-on-primary font-code-sm">1</span>
+<button class="px-2 py-1 rounded bg-surface-container text-primary font-medium hover:bg-surface-container-high" type="button">2</button>
+<button class="px-2 py-1 rounded bg-surface-container text-primary font-medium hover:bg-surface-container-high" type="button">3</button>
+<button class="px-2 py-1 rounded bg-surface-container text-primary font-medium hover:bg-surface-container-high" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- WORKSTATION SEAT VISUALIZER: Selected Lab C3A (Interactive Floorplan Grid) -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-md">
+<!-- Visualizer Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-1">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">grid_on</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">
+                Session EX-2027-0104: Lab C3A Real-Time Workstation Seat Map
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              NUST SEECS Hall Array • 250 Terminals Total (Previewing Rows A through E • Cluster 1)
+            </p>
+</div>
+<!-- Quick Interactive Controls -->
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-label-sm text-outline mr-2">Zoom: 100%</span>
+<button class="p-1 rounded bg-surface-container-low text-primary hover:bg-surface-container" title="Zoom in" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+<button class="p-1 rounded bg-surface-container-low text-primary hover:bg-surface-container" title="Zoom out" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_out</span>
+</button>
+<button class="p-1 rounded bg-surface-container-low text-primary hover:bg-surface-container" title="Reset layout" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Legend Ribbon -->
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 p-2.5 rounded-lg bg-surface-container-low/60 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded bg-primary"></span>
+<span>Allocated &amp; Biometric Verified</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded bg-secondary-container"></span>
+<span>Spare / Buffer Terminal (Failover)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded bg-primary-fixed"></span>
+<span>Special Accommodation (Priority)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded bg-surface-container-highest"></span>
+<span>Hot-Spare Offline Hold</span>
+</div>
+<div class="ml-auto flex items-center gap-1 text-secondary font-code-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Grid Integrity Certified</span>
+</div>
+</div>
+<!-- CBT Workstation Matrix (50 Seat Dense Viewport) -->
+<div class="overflow-x-auto pb-2">
+<!-- Terminal Grid Wrapper -->
+<div class="min-w-[700px] flex flex-col gap-2 p-3 bg-surface-container-low rounded-lg">
+<!-- Front of Exam Hall Marker -->
+<div class="w-full py-1.5 mb-1 bg-surface-container text-center rounded text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">podium</span>
+<span>Front of Hall • Invigilator Dais &amp; Biometric Gateway Alpha</span>
+</div>
+<!-- ROW A (WS-01 to WS-10) -->
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-label-sm font-bold text-outline w-6 text-center">A</span>
+<div class="grid grid-cols-10 gap-1.5 flex-1">
+<!-- A1 Special Accom -->
+<div class="p-1.5 rounded bg-primary-fixed hover:bg-inverse-primary cursor-pointer transition-all flex flex-col items-center justify-between text-center" title="WS-01 - Special Needs Desk">
+<span class="font-code-sm text-[10px] font-bold text-on-primary-fixed">WS-01</span>
+<span class="material-symbols-outlined text-[13px] text-on-primary-fixed">accessible</span>
+<span class="font-code-sm text-[9px] text-on-primary-fixed truncate w-full">#01004</span>
+</div>
+<!-- A2 to A9 standard filled -->
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-02</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01012</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-03</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01018</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-04</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01021</span>
+</div>
+<!-- Buffer / Failover A5 -->
+<div class="p-1.5 rounded bg-secondary-container hover:bg-secondary-fixed cursor-pointer transition-all flex flex-col items-center justify-between text-center" title="Spare Hot Terminal">
+<span class="font-code-sm text-[10px] font-bold text-on-secondary-container">WS-05</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">tune</span>
+<span class="font-code-sm text-[9px] text-secondary font-semibold">SPARE</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-06</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01029</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-07</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01033</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-08</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01039</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-09</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01045</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-10</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01048</span>
+</div>
+</div>
+</div>
+<!-- ROW B (WS-11 to WS-20) - Includes ACTIVE workstation WS-18 -->
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-label-sm font-bold text-outline w-6 text-center">B</span>
+<div class="grid grid-cols-10 gap-1.5 flex-1">
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-11</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01050</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-12</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01055</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-13</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01062</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-14</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01068</span>
+</div>
+<!-- Hot Spare B15 -->
+<div class="p-1.5 rounded bg-surface-container-highest cursor-pointer transition-all flex flex-col items-center justify-between text-center" title="Reserved Hot-Spare">
+<span class="font-code-sm text-[10px] font-bold text-on-surface-variant">WS-15</span>
+<span class="material-symbols-outlined text-[13px] text-outline">dns</span>
+<span class="font-code-sm text-[9px] text-outline font-semibold">HOLD</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-16</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01074</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-17</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01080</span>
+</div>
+<!-- SELECTED WORKSTATION WS-18: Highlights Drawer context -->
+<div class="p-1.5 rounded bg-secondary text-on-secondary shadow-md ring-2 ring-primary cursor-pointer transition-all flex flex-col items-center justify-between text-center scale-105" title="Active Focus: Workstation C3A-WS-18 (Ayesha Siddiqui)">
+<span class="font-code-sm text-[10px] font-bold text-secondary-container">WS-18</span>
+<span class="material-symbols-outlined text-[14px] text-secondary-container animate-pulse">check_circle</span>
+<span class="font-code-sm text-[9px] font-bold text-white truncate w-full">#01052</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-19</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01089</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-20</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01094</span>
+</div>
+</div>
+</div>
+<!-- ROW C (WS-21 to WS-30) -->
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-label-sm font-bold text-outline w-6 text-center">C</span>
+<div class="grid grid-cols-10 gap-1.5 flex-1">
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-21</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01102</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-22</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01108</span>
+</div>
+<div class="p-1.5 rounded bg-primary-fixed hover:bg-inverse-primary cursor-pointer transition-all flex flex-col items-center justify-between text-center" title="WS-23 - Left Handed Special Desk">
+<span class="font-code-sm text-[10px] font-bold text-on-primary-fixed">WS-23</span>
+<span class="material-symbols-outlined text-[13px] text-on-primary-fixed">front_hand</span>
+<span class="font-code-sm text-[9px] text-on-primary-fixed truncate w-full">#01114</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-24</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01120</span>
+</div>
+<div class="p-1.5 rounded bg-secondary-container hover:bg-secondary-fixed cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] font-bold text-on-secondary-container">WS-25</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">tune</span>
+<span class="font-code-sm text-[9px] text-secondary font-semibold">SPARE</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-26</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01131</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-27</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01135</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-28</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01140</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-29</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01145</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-30</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01150</span>
+</div>
+</div>
+</div>
+<!-- ROW D (WS-31 to WS-40) -->
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-label-sm font-bold text-outline w-6 text-center">D</span>
+<div class="grid grid-cols-10 gap-1.5 flex-1">
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-31</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01152</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-32</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01156</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-33</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01160</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-34</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01165</span>
+</div>
+<div class="p-1.5 rounded bg-secondary-container hover:bg-secondary-fixed cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] font-bold text-on-secondary-container">WS-35</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">tune</span>
+<span class="font-code-sm text-[9px] text-secondary font-semibold">SPARE</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-36</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01170</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-37</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01174</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-38</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01178</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-39</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01182</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-40</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01187</span>
+</div>
+</div>
+</div>
+<!-- ROW E (WS-41 to WS-50) -->
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-label-sm font-bold text-outline w-6 text-center">E</span>
+<div class="grid grid-cols-10 gap-1.5 flex-1">
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-41</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01190</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-42</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01195</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-43</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01201</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-highest cursor-pointer transition-all flex flex-col items-center justify-between text-center" title="Reserved Hot-Spare">
+<span class="font-code-sm text-[10px] font-bold text-on-surface-variant">WS-44</span>
+<span class="material-symbols-outlined text-[13px] text-outline">dns</span>
+<span class="font-code-sm text-[9px] text-outline font-semibold">HOLD</span>
+</div>
+<div class="p-1.5 rounded bg-secondary-container hover:bg-secondary-fixed cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] font-bold text-on-secondary-container">WS-45</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">tune</span>
+<span class="font-code-sm text-[9px] text-secondary font-semibold">SPARE</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-46</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01208</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-47</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01213</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-48</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01219</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-49</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01224</span>
+</div>
+<div class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container cursor-pointer transition-all flex flex-col items-center justify-between text-center">
+<span class="font-code-sm text-[10px] text-surface-container">WS-50</span>
+<span class="material-symbols-outlined text-[13px] text-secondary-container">desktop_windows</span>
+<span class="font-code-sm text-[9px] text-outline-variant truncate w-full">#01230</span>
+</div>
+</div>
+</div>
+<!-- Hall Back Exit Bar -->
+<div class="w-full py-1 bg-surface-container-highest/60 text-center rounded text-outline font-label-sm text-label-sm uppercase tracking-widest text-[10px] mt-1">
+              Rear Access Corridor • Exit Turnstiles Bravo &amp; Charlie (Rows F-Z in Cluster 2)
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT DETAIL DRAWER: 32% (xl:col-span-4) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Panel 1: Candidate Allocation Dossier -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-md">
+<!-- Panel Header -->
+<div class="flex items-center justify-between pb-2 bg-surface-container-low -mx-space-md -mt-space-md p-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">how_to_reg</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Desk Inspector</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">Workstation C3A-WS-18</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            OCCUPIED
+          </span>
+</div>
+<!-- Candidate Identity & Card -->
+<div class="flex items-start gap-space-sm pt-1">
+<img class="w-14 h-16 rounded object-cover shadow-sm bg-surface-container" data-alt="Official Pakistani passport size formal headshot of female engineering admission candidate Ayesha Siddiqui with navy blue institutional background in sharp crisp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCoeYTNR4IxsqNWhXdPeMyqRrM_Hr66mos4YgP44kwA-62Hg7NykiMiGLVVE05J2_I2JhpSaInk2w2aCXXGSjm5l--z_P-lEGrCUFrN2_YDDFAiTcEw6zfpbAgiQszeRZuwse580e2Odr9sebGHJGQsxhHMVHA8OPGuPSyf_UvGQ2auohHxFne2lt7J-t-LZxVVMGePMfV-_gS_YD0ZkENB7FrS91vwpWZEnWalOmm7k1ApPjRRARylQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-primary font-bold truncate">Ayesha Siddiqui</span>
+<div class="flex items-center gap-1 font-code-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Roll:</span>
+<span class="font-bold text-primary">CA-2027-01052</span>
+</div>
+<span class="font-code-sm text-label-sm text-outline">CNIC: 61101-*******-4</span>
+</div>
+</div>
+<!-- Technical Specification Metadata Table -->
+<div class="flex flex-col gap-2 font-body-sm text-body-sm bg-surface-container-low p-3 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Exam Track:</span>
+<span class="font-semibold text-primary">Pre-Engineering / ECAT-CS</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Desk Hardware:</span>
+<span class="text-primary font-code-sm text-label-sm">Standard Right-Hand (1080p)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">HSM Card Reader:</span>
+<span class="text-secondary font-code-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active &amp; Ready
+            </span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Biometric Status:</span>
+<span class="text-secondary font-code-sm text-label-sm">NADRA-8492019-PK</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Admit Slip Token:</span>
+<span class="text-on-surface font-code-sm text-label-sm">Dispatched Feb 02, 2027</span>
+</div>
+</div>
+<!-- Candidate Actions Toolbar -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Swap Workstation</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">transfer_within_a_station</span>
+<span>Reallocate</span>
+</button>
+</div>
+<button class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md hover:bg-surface-container transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print Candidate Exam Dossier Slip</span>
+</button>
+</div>
+</div>
+<!-- Panel 2: Automated Allocation Invariants -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 pb-1">
+<span class="material-symbols-outlined text-[20px] text-primary">gavel</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Algorithmic Seat Invariants</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Strict deterministic constraints enforced by the automated central allocation daemon prior to roster sealing:
+        </p>
+<div class="flex flex-col gap-2.5 mt-2">
+<!-- Rule 1 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">shuffle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Randomized Dispersion</span>
+<span class="font-body-sm text-on-surface-variant text-[12px] leading-tight mt-0.5">
+                Students from the same secondary college or intermediate board are dispersed ≥3 physical terminals apart.
+              </span>
+</div>
+</div>
+<!-- Rule 2 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">shield</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Failover Buffer Guarantee</span>
+<span class="font-body-sm text-on-surface-variant text-[12px] leading-tight mt-0.5">
+                Strict minimum of 5% hot-spare terminals reserved in each CBT cluster for zero-delay hardware failover.
+              </span>
+</div>
+</div>
+<!-- Rule 3 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">accessible_forward</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Special Needs Accessibility</span>
+<span class="font-body-sm text-on-surface-variant text-[12px] leading-tight mt-0.5">
+                Front-row and doorway stations automatically prioritized for documented physical accommodations.
+              </span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Audit Hash -->
+<div class="mt-2 p-2 bg-surface-container rounded flex items-center justify-between font-code-sm text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1 truncate mr-2">
+<span class="material-symbols-outlined text-[14px] text-outline">fingerprint</span>
+<span class="font-semibold text-primary">SHA-256:</span>
+<span class="truncate">7c4e09f1...849a902a</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold shrink-0">RATIFIED</span>
+</div>
+</div>
+<!-- Panel 3: Invigilator & Proctor Assignment Protocol -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Duty Invigilation Team</h3>
+</div>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">5 Personnel</span>
+</div>
+<!-- Invigilators List -->
+<div class="flex flex-col divide-y divide-surface-container">
+<!-- Lead -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[16px]">supervisor_account</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Prof. Haris Munir</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Chief Invigilator • Dean Computing</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Biometric Cleared">verified</span>
+</div>
+<!-- Proctor Team -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[16px]">person_check</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">4 Lab Attendants &amp; Proctors</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Conflict-of-interest sworn &amp; cleared</span>
+</div>
+</div>
+<span class="font-code-sm text-label-sm text-secondary font-medium">Synced</span>
+</div>
+<!-- Center Superintendent -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[16px]">military_tech</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Dr. Tariq Mansoor</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Center Superintendent • Director Ops</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] uppercase font-bold text-primary bg-surface-container px-1.5 py-0.5 rounded">PRESIDING</span>
+</div>
+</div>
+<!-- Encrypted Payload Dispatch Ready Banner -->
+<div class="p-3 mt-1 rounded-lg bg-secondary-container/40 flex items-center gap-2 text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px] text-secondary">lock_clock</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">Payload Sealed &amp; Armored</span>
+<span class="font-body-sm text-[12px] text-primary">Encrypted exam package keys dispatchable T-15 mins.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

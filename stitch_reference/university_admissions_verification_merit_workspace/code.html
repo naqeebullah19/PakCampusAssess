@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#93000a","primary":"#082135","surface-tint":"#4b6077","surface-container":"#e7eff8","inverse-primary":"#b2c9e3","outline-variant":"#c3c7cd","on-primary-container":"#899fb8","on-tertiary-fixed":"#161d19","secondary":"#3b6751","surface-container-low":"#edf4fe","primary-fixed-dim":"#b2c9e3","on-secondary-fixed-variant":"#234f3b","on-secondary-fixed":"#002113","surface-container-high":"#e1e9f2","inverse-on-surface":"#eaf2fb","tertiary-fixed":"#dce4de","on-background":"#151c23","on-primary":"#ffffff","on-tertiary-fixed-variant":"#414944","inverse-surface":"#293138","on-tertiary":"#ffffff","on-tertiary-container":"#979f99","tertiary":"#19211d","tertiary-fixed-dim":"#c0c8c2","on-error":"#ffffff","surface-container-highest":"#dbe3ec","background":"#f6f9ff","on-primary-fixed-variant":"#33495e","outline":"#74777d","primary-fixed":"#cfe5ff","on-surface-variant":"#43474c","surface-dim":"#d3dbe4","surface-variant":"#dbe3ec","on-primary-fixed":"#041d31","on-secondary-container":"#3f6b55","on-secondary":"#ffffff","surface":"#f6f9ff","error-container":"#ffdad6","secondary-container":"#baebcf","surface-bright":"#f6f9ff","secondary-fixed":"#bdedd2","primary-container":"#20364b","on-surface":"#151c23","secondary-fixed-dim":"#a2d1b6","tertiary-container":"#2e3631","surface-container-lowest":"#ffffff","error":"#ba1a1a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","space-xl":"2rem","gutter-desktop":"1.5rem","margin-tablet":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1rem","margin-desktop":"2rem","margin":"1rem"},fontFamily:{"label-sm":["Public Sans"],"label-md":["Public Sans"],"body-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"body-sm":["Public Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Public Sans"],"headline-md":["Public Sans"],"headline-xl":["Public Sans"],"body-md":["Public Sans"]},fontSize:{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[248px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(32,54,75,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="PakCampusAssess Institutional Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XPA3GhxpteIRiyC5IF2_hH-dLr9Dj7PrDQQySz-4DfW8Mf9u1P1fAmxvdQp6ZeWfg9LxA2_1oF82UzLDSpnLWRS078dcs45lMBXIbjwVpSEVSqnRxP6ZLWDc3D-DX5D1yq6Ij7TDMVNLe6qyEb0QGFfIqmtxMxPdj6dbS6t308tuZloW6mQo57qFupIsgzO4h1HcEgTjHtElK0BvIdjGJW6d3KARfy2rJKVJnxogHKsE4aON1bSfN2hvMN"/><div class="flex flex-col"><span class="font-headline-md text-body-sm font-bold tracking-tight text-primary leading-tight">PakCampusAssess</span><span class="font-code-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ministry Portal</span></div></div><div class="px-space-md py-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-secondary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wide font-semibold">National Session Active</span></div></div><nav class="flex flex-col px-space-xs gap-y-4 pb-space-lg" data-active-classes="bg-primary text-on-primary font-medium rounded-lg shadow-sm"><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">1. Core</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-code-sm text-label-sm">12</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-label-md text-label-md">Audit Logs</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">2. Examination Ops</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="test-categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-label-md text-label-md">Test Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="question-bank" href="#"><span class="material-symbols-outlined text-[18px]">quiz</span><span class="font-label-md text-label-md">Question Bank</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="assessment-blueprints" href="#"><span class="material-symbols-outlined text-[18px]">architecture</span><span class="font-label-md text-label-md">Assessment Blueprints</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examination-sessions" href="#"><span class="material-symbols-outlined text-[18px]">event_available</span><span class="font-label-md text-label-md">Examination Sessions</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-registrations" href="#"><span class="material-symbols-outlined text-[18px]">person_add</span><span class="font-label-md text-label-md">Candidate Registrations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seat-allocation" href="#"><span class="material-symbols-outlined text-[18px]">event_seat</span><span class="font-label-md text-label-md">Seat Allocation</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">3. Infrastructure &amp; Staff</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="centers-and-universities" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span class="font-label-md text-label-md">Centers &amp; Universities</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="labs-and-workstations" href="#"><span class="material-symbols-outlined text-[18px]">computer</span><span class="font-label-md text-label-md">Labs &amp; Workstations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ip-authorization" href="#"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-label-md text-label-md">IP Authorization</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examiner-management" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-label-md text-label-md">Examiner Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="live-exam-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">videocam</span><span class="font-label-md text-label-md">Live Exam Monitoring</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">4. Results &amp; Merit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="results-and-scoring" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-label-md text-label-md">Results &amp; Scoring</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="merit-policies" href="#"><span class="material-symbols-outlined text-[18px]">policy</span><span class="font-label-md text-label-md">Merit Policies</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="applications-and-verification" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span class="font-label-md text-label-md">Applications &amp; Verification</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="merit-lists-and-publication" href="#"><span class="material-symbols-outlined text-[18px]">leaderboard</span><span class="font-label-md text-label-md">Merit Lists &amp; Publication</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">5. Settings</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-label-md text-label-md">System Settings</span></a></div></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm font-semibold uppercase">Helpline: 0800-CAMPUS</span><button class="hover:text-primary" type="button"><span class="material-symbols-outlined text-[16px]">first_page</span></button></div><div class="flex items-center justify-between font-code-sm text-label-sm text-outline"><span class="truncate">PakCampusAssess OS</span><span>v2.4.1-rc</span></div></div></aside><div class="pl-[248px]"><header class="fixed top-0 left-[248px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(32,54,75,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-1 max-w-sm"><div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant overflow-hidden whitespace-nowrap"><span class="font-semibold text-primary">PakCampusAssess</span><span class="text-outline">/</span><span>Super Admin</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Overview</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container px-3 py-1.5 rounded-lg text-on-surface-variant focus-within:ring-1 focus-within:ring-secondary"><span class="material-symbols-outlined text-[18px] mr-2 text-outline">search</span><input class="w-full bg-transparent font-body-sm text-body-sm focus:outline-none placeholder:text-outline text-on-surface" placeholder="Search candidates, roll #, test sessions..." type="text"/><kbd class="font-code-sm text-label-sm bg-surface-container-lowest px-1.5 py-0.5 rounded text-on-surface-variant shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>All Systems Operational</span></div><div class="flex items-center bg-surface-container-low px-2 py-1 rounded-lg"><label class="sr-only" for="role-switcher">Switch Role</label><select class="bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer pr-1" id="role-switcher"><option selected="">Super Administrator</option><option>Student</option><option>Examiner</option><option>University Admissions</option></select></div><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md font-semibold text-primary leading-tight">Dr. Tariq Mansoor</span><span class="font-code-sm text-label-sm text-on-surface-variant">Exam Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgTwsGPYOHGhvqwxWqktGhuAfDlgCyr2MTDHKk71SjBtDae-k3J7R8V1eLdSFm1LDHXetNbpqVzsMpML2xH1GL39Hb-AVrW7h8kh--MjKnxMes3GKMtwkd6QRQS9Y-nNvHgP1CjLTPQLnoOVD9k6776-8x90lUvpogFMlkaeCFXRAJ7rasipqd5yizfCJ4qnIhXV4UFegxVSQDY7sLmpp7hzscCXB-EBl85n1Z7vH-fqHGVPT0JNwtsA"/></div></div></header><main class="relative pt-16 min-h-screen w-full px-gutter-desktop py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- Top Command & Docket Header Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">Undergraduate Admissions Verification Docket</span>
+<span class="font-code-sm text-label-sm bg-surface-container-high px-2 py-0.5 rounded-full text-on-surface-variant font-medium">Cycle 2027-A</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-fixed-variant px-2.5 py-0.5 rounded-full flex items-center gap-1.5 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Statutory Audit Mode
+          </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_balance</span>
+<span class="font-semibold text-primary">NUST Central Admissions Directorate</span>
+<span>•</span>
+<span>Campus: Sector H-12 Islamabad</span>
+<span>•</span>
+<span class="font-code-sm text-label-sm text-outline">Ref: DIR-ADM/2027/BS-CS-09</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 flex-wrap">
+<button class="h-9 px-3.5 bg-surface-container-lowest hover:bg-surface-container-low text-primary-container rounded-lg font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Audit Dossier</span>
+</button>
+<button class="h-9 px-3.5 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>Submit Batch to Faculty Review</span>
+</button>
+<button class="h-9 px-4 bg-secondary hover:bg-on-secondary-container text-on-secondary rounded-lg font-label-md text-label-md flex items-center gap-2 shadow-sm transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[17px]">calculate</span>
+<span>Calculate Merit Aggregates</span>
+</button>
+</div>
+</div>
+<!-- Filter Control Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm pt-2 bg-surface-container-low/60 p-3 rounded-lg">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Admission Intake Cycle</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-2.5 py-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-outline mr-2">event_repeat</span>
+<select class="w-full bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer">
+<option selected="">Spring 2027 (Undergraduate Regular)</option>
+<option>Fall 2026 (Archived Retrospective)</option>
+<option>Overseas / SAT-II Quota 2027</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Program Cohort &amp; Capacity</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-2.5 py-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary mr-2">school</span>
+<select class="w-full bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer">
+<option selected="">BS Computer Science (Seats: 250 | Applicants: 4,820)</option>
+<option>BS Software Engineering (Seats: 180 | Applicants: 3,410)</option>
+<option>BEE Electrical Engineering (Seats: 300 | Applicants: 2,190)</option>
+<option>BS Artificial Intelligence (Seats: 120 | Applicants: 4,110)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Verification Phase Filter</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-2.5 py-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-outline mr-2">filter_alt</span>
+<select class="w-full bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer">
+<option selected="">Pending Verification (48)</option>
+<option>Verified &amp; Board Cleared (4,120)</option>
+<option>Correction Required / Discrepancy (142)</option>
+<option>All Dossiers (4,820)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Key Institutional Metrics Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Program Applicants</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">group</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">4,820</span>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">+14.2% YoY</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between">
+<span>NUST C3A &amp; SEECS Quotas</span>
+<span class="font-code-sm text-primary font-semibold">100% Filled</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Verified &amp; Cleared</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">4,120</span>
+<span class="font-code-sm text-label-sm bg-secondary-container px-1.5 py-0.5 rounded text-on-secondary-fixed-variant font-bold">85.5%</span>
+</div>
+<div class="mt-2 w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 85.5%;"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Action / Discrepancy</span>
+<span class="material-symbols-outlined text-error text-[20px]">flag</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-error font-bold">142</span>
+<span class="font-code-sm text-label-sm text-error bg-error-container/60 px-1.5 py-0.5 rounded font-semibold">2.9% hold</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm truncate">
+        FSc gazette discrepancy or domicile review
+      </div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between bg-gradient-to-br from-surface-container-lowest via-surface-container-lowest to-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Aggregate Cut-off (Prov.)</span>
+<span class="material-symbols-outlined text-primary text-[20px]">leaderboard</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">86.42%</span>
+<span class="font-code-sm text-label-sm text-outline font-medium">Rank #250</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between">
+<span>Seat Quota: 250 Candidates</span>
+<span class="font-code-sm text-secondary font-semibold">Delta +0.68%</span>
+</div>
+</div>
+</div>
+<!-- Main Work Split Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Applicant Queue Table (7 cols) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Search & Sorting Filter Strip -->
+<div class="p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="relative w-full sm:w-80">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[18px] text-outline">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-low text-primary font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary text-on-surface placeholder:text-outline" placeholder="Search Roll, App ID, or CNIC..." type="text" value="Ayesha Siddiqui"/>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sort by:</span>
+<div class="bg-surface-container-low px-2 py-1 rounded-lg">
+<select class="bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer">
+<option selected="">Highest Aggregate Score</option>
+<option>Application Ref #</option>
+<option>Verification Urgency</option>
+</select>
+</div>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-high rounded-lg" title="Refresh Queue">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Scannable Enterprise Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-10 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="pl-4 pr-2 font-semibold">App Ref</th>
+<th class="px-2 font-semibold">Candidate</th>
+<th class="px-2 font-semibold text-right">SSC %</th>
+<th class="px-2 font-semibold text-right">HSSC-I</th>
+<th class="px-2 font-semibold text-right">ECAT-CS</th>
+<th class="px-2 font-semibold text-right">Aggregate</th>
+<th class="px-3 font-semibold text-center">Status</th>
+<th class="pr-4 pl-2 font-semibold text-right">Officer</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<!-- Selected Row: Ayesha Siddiqui -->
+<tr class="h-14 bg-secondary-container/40 hover:bg-secondary-container/50 cursor-pointer transition-colors transition-all">
+<td class="pl-4 pr-2 font-code-sm text-label-md text-primary font-bold">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  APP-2027-00482
+                </div>
+</td>
+<td class="px-2 py-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-primary">Ayesha Siddiqui</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">CNIC: 37405-8921402-4</span>
+</div>
+</td>
+<td class="px-2 text-right font-code-sm text-label-md text-primary">94.73%</td>
+<td class="px-2 text-right font-code-sm text-label-md text-primary">90.55%</td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-secondary">74.5<span class="text-label-sm text-outline font-normal">/80</span></td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-primary">89.14%</td>
+<td class="px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase font-semibold bg-secondary-container text-on-secondary-fixed-variant tracking-wider">
+                  Verification Ready
+                </span>
+</td>
+<td class="pr-4 pl-2 text-right font-code-sm text-label-sm text-on-surface-variant">T. Mansoor</td>
+</tr>
+<!-- Candidate Row 2 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="pl-4 pr-2 font-code-sm text-label-md text-primary">
+                APP-2027-00483
+              </td>
+<td class="px-2 py-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-medium text-primary">Muhammad Bilal Janjua</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">CNIC: 35202-1102941-1</span>
+</div>
+</td>
+<td class="px-2 text-right font-code-sm text-label-md">92.18%</td>
+<td class="px-2 text-right font-code-sm text-label-md">88.40%</td>
+<td class="px-2 text-right font-code-sm text-label-md font-medium text-primary">72.0<span class="text-label-sm text-outline font-normal">/80</span></td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-primary">87.52%</td>
+<td class="px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase font-semibold bg-surface-container-high text-on-surface-variant tracking-wider">
+                  Board Verified
+                </span>
+</td>
+<td class="pr-4 pl-2 text-right font-code-sm text-label-sm text-on-surface-variant">S. Farooq</td>
+</tr>
+<!-- Candidate Row 3 (Discrepancy) -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="pl-4 pr-2 font-code-sm text-label-md text-primary">
+                APP-2027-00484
+              </td>
+<td class="px-2 py-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-medium text-primary">Zainab Fatima Bukhari</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">CNIC: 61101-7829143-6</span>
+</div>
+</td>
+<td class="px-2 text-right font-code-sm text-label-md">96.00%</td>
+<td class="px-2 text-right font-code-sm text-label-md">93.20%</td>
+<td class="px-2 text-right font-code-sm text-label-md font-medium text-primary">76.0<span class="text-label-sm text-outline font-normal">/80</span></td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-primary">91.44%</td>
+<td class="px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase font-semibold bg-error-container text-on-error-container tracking-wider">
+                  Domicile Discrepancy
+                </span>
+</td>
+<td class="pr-4 pl-2 text-right font-code-sm text-label-sm text-on-surface-variant">M. Rashad</td>
+</tr>
+<!-- Candidate Row 4 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="pl-4 pr-2 font-code-sm text-label-md text-primary">
+                APP-2027-00485
+              </td>
+<td class="px-2 py-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-medium text-primary">Hamza Daniyal Qureshi</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">CNIC: 37405-4402911-7</span>
+</div>
+</td>
+<td class="px-2 text-right font-code-sm text-label-md">89.45%</td>
+<td class="px-2 text-right font-code-sm text-label-md">86.10%</td>
+<td class="px-2 text-right font-code-sm text-label-md font-medium text-primary">70.5<span class="text-label-sm text-outline font-normal">/80</span></td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-primary">85.02%</td>
+<td class="px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase font-semibold bg-secondary-container text-on-secondary-fixed-variant tracking-wider">
+                  Verification Ready
+                </span>
+</td>
+<td class="pr-4 pl-2 text-right font-code-sm text-label-sm text-on-surface-variant">T. Mansoor</td>
+</tr>
+<!-- Candidate Row 5 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="pl-4 pr-2 font-code-sm text-label-md text-primary">
+                APP-2027-00486
+              </td>
+<td class="px-2 py-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-medium text-primary">Usman Ali Cheema</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">CNIC: 34101-9921477-9</span>
+</div>
+</td>
+<td class="px-2 text-right font-code-sm text-label-md">91.09%</td>
+<td class="px-2 text-right font-code-sm text-label-md">87.50%</td>
+<td class="px-2 text-right font-code-sm text-label-md font-medium text-primary">71.0<span class="text-label-sm text-outline font-normal">/80</span></td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-primary">86.28%</td>
+<td class="px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase font-semibold bg-surface-container-high text-on-surface-variant tracking-wider">
+                  Under Queue
+                </span>
+</td>
+<td class="pr-4 pl-2 text-right font-code-sm text-label-sm text-on-surface-variant">R. Kausar</td>
+</tr>
+<!-- Candidate Row 6 -->
+<tr class="h-14 bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="pl-4 pr-2 font-code-sm text-label-md text-primary">
+                APP-2027-00487
+              </td>
+<td class="px-2 py-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-medium text-primary">Mehak Noor Baloch</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">CNIC: 54400-1092834-2</span>
+</div>
+</td>
+<td class="px-2 text-right font-code-sm text-label-md">93.80%</td>
+<td class="px-2 text-right font-code-sm text-label-md">89.90%</td>
+<td class="px-2 text-right font-code-sm text-label-md font-medium text-primary">73.0<span class="text-label-sm text-outline font-normal">/80</span></td>
+<td class="px-2 text-right font-code-sm text-label-md font-bold text-primary">88.45%</td>
+<td class="px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase font-semibold bg-secondary-container text-on-secondary-fixed-variant tracking-wider">
+                  Verification Ready
+                </span>
+</td>
+<td class="pr-4 pl-2 text-right font-code-sm text-label-sm text-on-surface-variant">T. Mansoor</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Queue Count -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Displaying 1–6 of 48 records pending verification</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-label-sm">Batch ID: #B-2027-A-CS</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="h-8 px-2.5 bg-surface-container-lowest rounded text-primary hover:bg-surface-container-high disabled:opacity-50 font-label-md text-label-md" disabled="">Previous</button>
+<span class="px-2 py-1 bg-primary text-on-primary rounded text-label-sm font-code-sm">1</span>
+<button class="h-8 w-8 bg-surface-container-lowest rounded text-primary hover:bg-surface-container-high text-label-sm font-code-sm">2</button>
+<button class="h-8 w-8 bg-surface-container-lowest rounded text-primary hover:bg-surface-container-high text-label-sm font-code-sm">3</button>
+<span class="text-outline">...</span>
+<button class="h-8 w-8 bg-surface-container-lowest rounded text-primary hover:bg-surface-container-high text-label-sm font-code-sm">8</button>
+<button class="h-8 px-2.5 bg-surface-container-lowest rounded text-primary hover:bg-surface-container-high font-label-md text-label-md">Next</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Deep Candidate Verification Dossier (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Candidate Profile & Biometric Pass Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Official Pakistani passport-size formal institutional photograph of female student Ayesha Siddiqui with navy blue background, wearing white shirt and blazer, crisp high resolution studio portrait for university matriculation docket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoZ340cU5lNORs10YHVWW55H94mmsz1rQbAPssB4tLiEFqqCeVwZGUrpbel6y3t1rVY81Di8AdNmY2vSPrnThIVHIUXLlc0_XQEp-WYNXzfKY3uXKciVpI2hb06WHok4zQ-SAdWpCAGvEVWDwDncoVW9wqHgAGkpqy1b6bpp6dQnXpLmSVIIpdGsu1hAaQvrbuaIdVU2J8Af9iRdra8V7-QmFCnx2nQs4lzjZhT5SwvNek1bUW2PRljw"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Ayesha Siddiqui</span>
+<span class="material-symbols-outlined text-secondary text-[18px]" title="Biometric Identity Verified">verified</span>
+</div>
+<div class="font-code-sm text-label-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Roll: <strong class="text-primary font-semibold">CA-2027-01052</strong></span>
+<span>•</span>
+<span>App: <strong class="text-primary font-semibold">APP-2027-00482</strong></span>
+</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-fixed-variant rounded font-code-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">fingerprint</span>
+                  NADRA Verified: #ND-8492019-PK
+                </span>
+</div>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Standing Rank</span>
+<span class="font-headline-lg text-headline-lg font-bold text-secondary">#48</span>
+<span class="font-code-sm text-label-sm text-outline">of 4,820</span>
+</div>
+</div>
+<!-- Academic Aggregate Computation Breakdown -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SSC (10%)</span>
+<span class="font-code-sm text-label-md font-bold text-primary">9.47%</span>
+<span class="font-code-sm text-label-sm text-outline">1042/1100</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">HSSC-I (40%)</span>
+<span class="font-code-sm text-label-md font-bold text-primary">36.22%</span>
+<span class="font-code-sm text-label-sm text-outline">498/550</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ECAT-CS (50%)</span>
+<span class="font-code-sm text-label-md font-bold text-secondary">46.56%</span>
+<span class="font-code-sm text-label-sm text-outline">74.5/80 (93.1%)</span>
+</div>
+</div>
+</div>
+<!-- Statutory Admission Criteria Checklist -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-md text-label-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">gavel</span>
+            Statutory Admissions Eligibility Criteria
+          </span>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">3 of 4 Certified</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1: SSC -->
+<div class="flex items-start gap-2.5 p-2 bg-secondary-container/30 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">SSC / Matriculation 60%+ Requirement</span>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">Cleared (94.73%)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">FBISE Islamabad Verified Gazette Roll #198421. Result validated via Board API webhook.</span>
+</div>
+</div>
+<!-- Item 2: HSSC / Hope -->
+<div class="flex items-start gap-2.5 p-2 bg-secondary-container/30 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">HSSC / FSc Pre-Engineering / ICS</span>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">Cleared Part-I</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">FSc Pre-Engineering Part-I (90.55%). Part-II Hope Certificate attached from Islamabad Model College F-10/4.</span>
+</div>
+</div>
+<!-- Item 3: ECAT -->
+<div class="flex items-start gap-2.5 p-2 bg-secondary-container/30 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">PakCampusAssess ECAT-CS Threshold</span>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">Cleared (93.12th Pctl)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Candidate scored 74.5/80 in General Computing &amp; Mathematics (Exam Center: NUST SEECS Lab-3).</span>
+</div>
+</div>
+<!-- Item 4: Domicile (Requires attention) -->
+<div class="flex items-start gap-2.5 p-2 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">pending_actions</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">Provincial Domicile Verification</span>
+<span class="font-code-sm text-label-sm text-on-secondary-fixed-variant bg-secondary-container px-1.5 py-0.2 rounded font-semibold">Needs Officer Sign-off</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Punjab / Rawalpindi District. Attested PRC &amp; Form-B attached. Awaiting officer confirmation below.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Inspection Drawer -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-label-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">quick_reference_all</span>
+            Submitted Credentials Repository
+          </span>
+<span class="font-code-sm text-label-sm text-outline">4 of 4 Uploaded</span>
+</div>
+<!-- Document Selection Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1">
+<button class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">picture_as_pdf</span>
+<span>HSSC Hope Cert.pdf</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">description</span>
+<span>FBISE Matric Gazette.pdf</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+<span>Candidate CNIC.pdf</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">receipt</span>
+<span>Fee Challan.pdf</span>
+</button>
+</div>
+<!-- Document Preview Window with Institutional Watermark -->
+<div class="relative w-full h-56 bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between p-4 shadow-inner">
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2 py-0.5 rounded shadow-sm text-primary font-semibold">Document ID: #DOC-HSSC-88392</span>
+<span class="font-code-sm text-label-sm text-outline">Size: 1.4 MB (SHA-256 Valid)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 bg-surface-container-lowest rounded hover:bg-surface-container text-primary" title="Zoom In"><span class="material-symbols-outlined text-[16px]">zoom_in</span></button>
+<button class="p-1 bg-surface-container-lowest rounded hover:bg-surface-container text-primary" title="Download"><span class="material-symbols-outlined text-[16px]">download</span></button>
+<button class="p-1 bg-surface-container-lowest rounded hover:bg-surface-container text-primary" title="Open Fullscreen"><span class="material-symbols-outlined text-[16px]">fullscreen</span></button>
+</div>
+</div>
+<!-- Document Content Mockup with Official Seal -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+<div class="flex flex-col items-center rotate-[-18deg] text-center">
+<span class="material-symbols-outlined text-[90px] text-secondary">verified</span>
+<span class="font-headline-lg text-headline-lg font-bold uppercase tracking-widest text-secondary">IBCC e-Verify Cleared</span>
+<span class="font-code-sm text-label-sm text-primary">Inter Board Coordination Commission Pakistan</span>
+</div>
+</div>
+<div class="z-10 flex flex-col gap-1.5 bg-surface-container-lowest/80 backdrop-blur-sm p-3 rounded-lg max-w-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Hope Certificate Authentication</span>
+<p class="font-body-sm text-body-sm text-primary leading-tight">
+              “Certified that Miss Ayesha Siddiqui is expected to obtain ≥88% marks in HSSC Part-II Annual Exam.”
+            </p>
+<div class="flex items-center justify-between text-outline font-code-sm text-label-sm pt-1">
+<span>Signatory: Prof. M. Arshad (Principal)</span>
+<span>Ref: IMCG/F10-4/2026/812</span>
+</div>
+</div>
+<div class="flex items-center justify-between z-10 text-on-surface-variant font-code-sm text-label-sm">
+<span>Verified against Central Board OCR Stream</span>
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 100% Match Integrity
+            </span>
+</div>
+</div>
+</div>
+<!-- Official Reviewer Decision Controls Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<span class="font-headline-md text-label-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">assignment_turned_in</span>
+          Admissions Officer Decision &amp; Audit Trail
+        </span>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="review-notes">Verification Notes &amp; Statutory Remarks</label>
+<textarea class="w-full p-2.5 bg-surface-container-low text-primary font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline" id="review-notes" placeholder="Enter formal review observations..." rows="2">Attested College Hope certificate verified by Principal Model College F-10/4. Matric gazette cross-referenced via FBISE e-portal. PRC Domicile validated for Rawalpindi seat category.</textarea>
+</div>
+<!-- Action Control Buttons -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+<button class="h-10 px-3 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">contact_support</span>
+<span>Request Info</span>
+</button>
+<button class="h-10 px-3 bg-surface-container-low hover:bg-error-container text-error rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Deficiency Note</span>
+</button>
+<button class="h-10 px-3 bg-secondary hover:bg-on-secondary-container text-on-secondary rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm font-semibold transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Approve &amp; Forward</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-2 text-outline font-code-sm text-label-sm">
+<span>Digital Stamp: DIR-ADM-NUST-2027</span>
+<span>Logged by: Dr. Tariq Mansoor (Exam Director)</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

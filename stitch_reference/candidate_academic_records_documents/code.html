@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#93000a","primary":"#082135","surface-tint":"#4b6077","surface-container":"#e7eff8","inverse-primary":"#b2c9e3","outline-variant":"#c3c7cd","on-primary-container":"#899fb8","on-tertiary-fixed":"#161d19","secondary":"#3b6751","surface-container-low":"#edf4fe","primary-fixed-dim":"#b2c9e3","on-secondary-fixed-variant":"#234f3b","on-secondary-fixed":"#002113","surface-container-high":"#e1e9f2","inverse-on-surface":"#eaf2fb","tertiary-fixed":"#dce4de","on-background":"#151c23","on-primary":"#ffffff","on-tertiary-fixed-variant":"#414944","inverse-surface":"#293138","on-tertiary":"#ffffff","on-tertiary-container":"#979f99","tertiary":"#19211d","tertiary-fixed-dim":"#c0c8c2","on-error":"#ffffff","surface-container-highest":"#dbe3ec","background":"#f6f9ff","on-primary-fixed-variant":"#33495e","outline":"#74777d","primary-fixed":"#cfe5ff","on-surface-variant":"#43474c","surface-dim":"#d3dbe4","surface-variant":"#dbe3ec","on-primary-fixed":"#041d31","on-secondary-container":"#3f6b55","on-secondary":"#ffffff","surface":"#f6f9ff","error-container":"#ffdad6","secondary-container":"#baebcf","surface-bright":"#f6f9ff","secondary-fixed":"#bdedd2","primary-container":"#20364b","on-surface":"#151c23","secondary-fixed-dim":"#a2d1b6","tertiary-container":"#2e3631","surface-container-lowest":"#ffffff","error":"#ba1a1a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","space-xl":"2rem","gutter-desktop":"1.5rem","margin-tablet":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1rem","margin-desktop":"2rem","margin":"1rem"},fontFamily:{"label-sm":["Public Sans"],"label-md":["Public Sans"],"body-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"body-sm":["Public Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Public Sans"],"headline-md":["Public Sans"],"headline-xl":["Public Sans"],"body-md":["Public Sans"]},fontSize:{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[268px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(32,54,75,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="PakCampusAssess Institutional Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XPA3GhxpteIRiyC5IF2_hH-dLr9Dj7PrDQQySz-4DfW8Mf9u1P1fAmxvdQp6ZeWfg9LxA2_1oF82UzLDSpnLWRS078dcs45lMBXIbjwVpSEVSqnRxP6ZLWDc3D-DX5D1yq6Ij7TDMVNLe6qyEb0QGFfIqmtxMxPdj6dbS6t308tuZloW6mQo57qFupIsgzO4h1HcEgTjHtElK0BvIdjGJW6d3KARfy2rJKVJnxogHKsE4aON1bSfN2hvMN"/><div class="flex flex-col"><span class="font-headline-md text-body-sm font-bold tracking-tight text-primary leading-tight">PakCampusAssess</span><span class="font-code-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Candidate Portal</span></div></div><div class="mx-space-sm my-space-xs p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-md text-label-md font-semibold text-primary truncate">Ayesha Siddiqui</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Verified</span></div><div class="flex items-center justify-between font-code-sm text-label-sm text-on-surface-variant"><span>Roll No:</span><span class="font-semibold text-primary">CA-2027-01052</span></div></div><nav class="flex flex-col px-space-xs gap-y-3 pb-space-lg" data-active-classes="bg-primary text-on-primary font-medium rounded-lg shadow-sm"><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Applicant Workspace</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-dashboard" href="#"><span class="font-label-md text-label-md">Dashboard</span><span class="w-2 h-2 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-profile" href="#"><span class="font-label-md text-label-md">My Profile</span><span class="font-label-sm text-label-sm text-secondary font-semibold">CNIC Verified</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-all bg-primary text-on-primary font-medium rounded-lg shadow-sm" data-path="candidate-academic-records" href="#"><span class="font-label-md text-label-md">Academic Records</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Admissions &amp; Testing</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-available-tests" href="#"><span class="font-label-md text-label-md">Available Tests</span><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high font-code-sm text-label-sm text-primary">4 Open</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-my-registrations" href="#"><span class="font-label-md text-label-md">My Registrations</span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">2 Active</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-admit-card" href="#"><span class="font-label-md text-label-md">Admit Card / Roll No Slip</span><span class="font-label-sm text-label-sm text-secondary font-semibold">Ready</span></a></div><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Communications &amp; Help</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-notifications" href="#"><span class="font-label-md text-label-md">Notifications</span><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-code-sm text-label-sm">3 New</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="candidate-help-and-support" href="#"><span class="font-label-md text-label-md">Help &amp; Support</span></a></div></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm font-semibold uppercase">Helpline: 0800-CAMPUS</span><span class="font-code-sm text-label-sm text-secondary font-semibold">24/7</span></div><div class="flex items-center justify-between font-code-sm text-label-sm text-outline pt-1 border-t border-surface-container-high"><span class="truncate">NADRA Biometric Linked</span><span class="text-secondary font-semibold">Tier-4 Encrypted</span></div></div></aside><div class="pl-[268px]"><header class="fixed top-0 left-[268px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(32,54,75,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-1 max-w-sm"><div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant overflow-hidden whitespace-nowrap"><span class="font-semibold text-primary">PakCampusAssess</span><span class="text-outline">/</span><span class="text-primary font-medium">Candidate Portal (Undergraduate Cycle 2027)</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container px-3 py-1.5 rounded-lg text-on-surface-variant focus-within:ring-1 focus-within:ring-secondary"><span class="material-symbols-outlined text-[18px] mr-2 text-outline">search</span><input class="w-full bg-transparent font-body-sm text-body-sm focus:outline-none placeholder:text-outline text-on-surface" placeholder="Search tests, applications, documents..." type="text"/><kbd class="font-code-sm text-label-sm bg-surface-container-lowest px-1.5 py-0.5 rounded text-on-surface-variant shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>NADRA Verified Session</span></div><div class="flex items-center bg-surface-container-low px-2 py-1 rounded-lg"><label class="sr-only" for="role-switcher">Switch Role</label><select class="bg-transparent font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer pr-1" id="role-switcher"><option selected="">Candidate View</option><option>Super Administrator</option><option>Examiner</option><option>University Admissions</option></select></div><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md font-semibold text-primary leading-tight">Ayesha Siddiqui</span><span class="font-code-sm text-label-sm text-on-surface-variant">CA-2027-01052</span></div><img alt="Candidate Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgTwsGPYOHGhvqwxWqktGhuAfDlgCyr2MTDHKk71SjBtDae-k3J7R8V1eLdSFm1LDHXetNbpqVzsMpML2xH1GL39Hb-AVrW7h8kh--MjKnxMes3GKMtwkd6QRQS9Y-nNvHgP1CjLTPQLnoOVD9k6776-8x90lUvpogFMlkaeCFXRAJ7rasipqd5yizfCJ4qnIhXV4UFegxVSQDY7sLmpp7hzscCXB-EBl85n1Z7vH-fqHGVPT0JNwtsA"/></div></div></header><main class="relative pt-16 min-h-screen w-full px-gutter-desktop py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle top metadata bar -->
+<div class="flex flex-wrap items-center justify-between gap-y-2 mb-space-md text-on-surface-variant font-code-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+        IBCC Secure API v4.2 Connected
+      </span>
+<span>|</span>
+<span>Session Key: <span class="font-semibold text-primary">PK-VERIF-982103-X</span></span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span>Candidate ID: <span class="font-semibold text-primary">CA-2027-01052</span></span>
+<span>•</span>
+<span>NADRA CNIC: <span class="font-semibold text-primary">61101-*******-8</span></span>
+</div>
+</div>
+<!-- Primary Page Header Block -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-lg">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Verification Docket // Cycle 2027-A</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">Central IBCC Node: Islamabad</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Academic Records &amp; Document Repository</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">
+        Submit, review, and verify secondary and higher secondary school qualifications. Documents are verified by the Inter-Board Coordination Commission (IBCC) protocol.
+      </p>
+</div>
+<!-- Overall Verification Status Card -->
+<div class="w-full lg:w-80 bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between shrink-0">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Overall Verification</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          75% Complete
+        </span>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-1">Partially Verified</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mb-2.5">3 of 4 Core Documents Approved by Board Registry</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 75%"></div>
+</div>
+</div>
+</div>
+<!-- Top Action Required Amber Banner -->
+<div class="w-full p-space-md rounded-lg bg-surface-container-low mb-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-highest text-primary shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">priority_high</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-primary">Action Required: Intermediate (HSSC Part-II) Original Marks Sheet / Hope Certificate Pending</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest font-code-sm text-label-sm font-semibold text-on-surface-variant">Deadline: Feb 22, 2027</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Your undergraduate application index remains conditional. Upload your attested Part-II Gazette Marks Sheet or institutional Hope Certificate prior to central aggregate compilation.
+        </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shrink-0 hover:bg-primary-container transition-colors shadow-sm" href="#hssc-upload-section">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Upload Document</span>
+</a>
+</div>
+<!-- Grid layout: 8 Columns Primary Records + 4 Columns Audit / Guidelines Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Primary Qualification Blocks -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: SSC / Matriculation (Fully Verified) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-lg">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Tier-1 Qualification</div>
+<h2 class="font-headline-md text-headline-md text-primary">Secondary School Certificate (SSC / Matric)</h2>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Verified by FBISE Central Database</span>
+</div>
+</div>
+<!-- Academic Metadata Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md mb-space-lg">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Examining Board</span>
+<span class="font-headline-md text-body-md text-primary font-semibold mt-1 block">FBISE Islamabad</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">Federal Jurisdiction</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Program / Group</span>
+<span class="font-headline-md text-body-md text-primary font-semibold mt-1 block">Science (CS Group)</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">Physics, Chem, CS, Math</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Roll No &amp; Year</span>
+<span class="font-code-sm text-headline-md text-primary font-bold mt-1 block">184920</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annual Exam 2023</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Performance</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-code-sm text-headline-lg text-secondary font-bold">1042</span>
+<span class="font-code-sm text-body-sm text-on-surface-variant">/ 1100</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">94.73% • Grade A+</span>
+</div>
+</div>
+<!-- Subject-Wise Marks Snapshot (Compact Table) -->
+<div class="mb-space-lg bg-surface-container-low rounded-lg p-space-sm overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm uppercase tracking-wider">
+<th class="py-1 px-2 font-semibold">Subject</th>
+<th class="py-1 px-2 font-semibold">Theory</th>
+<th class="py-1 px-2 font-semibold">Practical</th>
+<th class="py-1 px-2 font-semibold">Total</th>
+<th class="py-1 px-2 font-semibold">Percentile</th>
+<th class="py-1 px-2 font-semibold text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-code-sm">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-2 font-label-md text-primary">Mathematics</td>
+<td class="py-2 px-2">75 / 75</td>
+<td class="py-2 px-2">-</td>
+<td class="py-2 px-2 font-bold text-primary">75 / 75</td>
+<td class="py-2 px-2 text-secondary">99.8th</td>
+<td class="py-2 px-2 text-right"><span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-label-sm">Passed</span></td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-2 font-label-md text-primary">Computer Science</td>
+<td class="py-2 px-2">55 / 55</td>
+<td class="py-2 px-2">20 / 20</td>
+<td class="py-2 px-2 font-bold text-primary">75 / 75</td>
+<td class="py-2 px-2 text-secondary">99.9th</td>
+<td class="py-2 px-2 text-right"><span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-label-sm">Passed</span></td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-2 font-label-md text-primary">Physics</td>
+<td class="py-2 px-2">61 / 65</td>
+<td class="py-2 px-2">10 / 10</td>
+<td class="py-2 px-2 font-bold text-primary">71 / 75</td>
+<td class="py-2 px-2 text-secondary">95.4th</td>
+<td class="py-2 px-2 text-right"><span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-label-sm">Passed</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Attached File & Actions -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[28px] shrink-0">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-primary truncate">SSC_Detailed_Marks_Certificate_Ayesha.pdf</span>
+<span class="font-code-sm text-label-sm text-on-surface-variant">1.8 MB • SHA-256 Verified: 4a9f...38bc • Cleared Jan 14, 2027</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors shadow-sm inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              View
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors shadow-sm inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Download
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors shadow-sm inline-flex items-center gap-1" onclick="openAuditModal('SSC-184920')" type="button">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+              Audit Trail
+            </button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: HSSC / Intermediate (Action Required) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm" id="hssc-upload-section">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-lg">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-surface-container-highest text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Tier-2 Qualification</div>
+<h2 class="font-headline-md text-headline-md text-primary">Higher Secondary School Certificate (HSSC / FSc)</h2>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+            Part-II Marks Sheet Pending
+          </span>
+</div>
+<!-- Academic Breakdown Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mb-space-lg">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Board &amp; Discipline</span>
+<span class="font-headline-md text-body-md text-primary font-semibold mt-1 block">FBISE Islamabad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">FSc Pre-Engineering / CS</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">HSSC Part-I Result</span>
+<span class="font-code-sm text-label-sm text-secondary font-semibold">Verified</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-code-sm text-headline-lg text-primary font-bold">498</span>
+<span class="font-code-sm text-body-sm text-on-surface-variant">/ 550</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">90.55% • Grade A+ (Roll: 519204)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">HSSC Part-II Status</span>
+<span class="font-headline-md text-body-md text-tertiary font-semibold mt-1 block">Awaiting Final Attestation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">College Hope Cert Required</span>
+</div>
+</div>
+<!-- Interactive Drag & Drop Upload Zone -->
+<div class="mb-space-md">
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2">
+            Upload HSSC Part-II Result Card or College Principal Hope Certificate
+          </label>
+<div class="relative group p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-center cursor-pointer flex flex-col items-center justify-center" id="drop-zone">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-secondary mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+</div>
+<div class="font-headline-md text-body-lg text-primary font-semibold">
+              Drop your attested document here, or <span class="text-secondary underline decoration-1 underline-offset-4">Browse Local Files</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-md">
+              Supported Formats: PDF, JPEG, PNG (Maximum file size: 5 MB). Document must be sealed &amp; signed by the College Principal or Controller of Examinations.
+            </p>
+<input accept=".pdf,.png,.jpg,.jpeg" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" id="hssc-file-input" type="file"/>
+<div class="mt-space-md flex flex-wrap items-center justify-center gap-3 font-code-sm text-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+                Cryptographic Hash Checked
+              </span>
+<span>•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">security</span>
+                Anti-Tamper OCR Verified
+              </span>
+<span>•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+                Tier-4 Vault Storage
+              </span>
+</div>
+</div>
+</div>
+<!-- Progress Tracker Preview during simulated upload -->
+<div class="hidden p-space-sm rounded-lg bg-surface-container flex items-center justify-between" id="upload-feedback">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] animate-spin">sync</span>
+<span class="font-label-md text-label-md text-primary font-medium" id="upload-status-text">Verifying College Seal and Resolution...</span>
+</div>
+<span class="font-code-sm text-label-sm text-secondary font-semibold" id="upload-percent">84%</span>
+</div>
+</section>
+<!-- SECTION 3: Mandatory Identity & Domicile Documents -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-lg">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Statutory Verification</div>
+<h2 class="font-headline-md text-headline-md text-primary">Identity, Guardianship &amp; Regional Quota Documents</h2>
+</div>
+</div>
+<span class="font-code-sm text-label-sm text-on-surface-variant">NADRA API v2 Linked</span>
+</div>
+<!-- 4 Sub-document Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Document 1: Candidate CNIC -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">fingerprint</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Candidate Smart CNIC / B-Form</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                Verified
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              Biometrically confirmed against National Database. Front &amp; Back high-resolution scan.
+            </p>
+<div class="flex items-center justify-between pt-space-xs font-code-sm text-label-sm text-on-surface-variant">
+<span>PDF • 2.1 MB</span>
+<div class="flex gap-2">
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">Preview</button>
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">Re-upload</button>
+</div>
+</div>
+</div>
+<!-- Document 2: Father/Guardian CNIC -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">supervisor_account</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Father / Guardian CNIC</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                Verified
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              Guardian relationship validated via NADRA Family Registration Certificate (FRC) link.
+            </p>
+<div class="flex items-center justify-between pt-space-xs font-code-sm text-label-sm text-on-surface-variant">
+<span>PDF • 1.4 MB</span>
+<div class="flex gap-2">
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">Preview</button>
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">Re-upload</button>
+</div>
+</div>
+</div>
+<!-- Document 3: Domicile (Review In Progress) -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">location_city</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Domicile (Islamabad Capital)</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">
+                Under Admin Review
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              Submitted Jan 16, 2027. Under scrutiny by ICT District Commissionerate verification queue.
+            </p>
+<div class="flex items-center justify-between pt-space-xs font-code-sm text-label-sm text-on-surface-variant">
+<span>PDF • 3.2 MB (Docket #ICT-9912)</span>
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">Track Status</button>
+</div>
+</div>
+<!-- Document 4: Passport Photo -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">portrait</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Passport Photograph</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                Biometric Ready
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              White background, ICAO compliant. Encoded onto Candidate Admit Card &amp; Roll Slip.
+            </p>
+<div class="flex items-center justify-between pt-space-xs font-code-sm text-label-sm text-on-surface-variant">
+<span>JPEG • 450 KB</span>
+<div class="flex gap-2">
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">View Crop</button>
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-medium" type="button">Replace</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Verification Guidelines, Equivalence Rules, & Audit Info -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- IBCC Verification Protocol Card -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+<h3 class="font-headline-md text-headline-md text-primary">IBCC Verification Protocol</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          All entry exam aggregate rankings require automated or manual validation by the Inter-Board Coordination Commission (IBCC) under Ordinance XVII.
+        </p>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md font-semibold text-primary block">Cambridge / Edexcel Applicants</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              O/A Level candidates must produce an official IBCC Equivalence Certificate with converted numerical percentage marks before final merit lists freeze.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md font-semibold text-primary block">Attestation Standards</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Provisional copies must bear the physical signature and round stamp of the Head of Institution (Principal) or an authorized Gazetted Officer (BPS-17+).
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md font-semibold text-primary block">Automatic Database Match</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Federal (FBISE), Lahore, Rawalpindi, and Karachi board rolls sync via high-speed API directly against official exam gazettes.
+            </p>
+</div>
+</div>
+</div>
+<!-- Common Rejection Pitfalls Box -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-error text-[20px]">report_problem</span>
+<h3 class="font-headline-md text-headline-md text-primary">Common Document Rejection Pitfalls</h3>
+</div>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">close</span>
+<span><strong>Cropped Corners or Keystoning:</strong> Scans taken at an angle where official QR codes or serial stamps are partially omitted.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">close</span>
+<span><strong>Unverified Web Gazette Printouts:</strong> Unofficial internet screenshots without an authorized institution stamp.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">close</span>
+<span><strong>CNIC Flash Glare:</strong> Inability of OCR to accurately scan candidate CNIC expiry and NADRA chip numbers due to flash reflection.</span>
+</li>
+</ul>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Need attestation assistance?</span>
+<a class="font-label-md text-label-md text-secondary font-semibold hover:underline" href="#">Download Guide (PDF)</a>
+</div>
+</div>
+<!-- Institutional Support Helpline Desk -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center gap-space-sm mb-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-md font-semibold text-primary">Verification Help Desk</h4>
+<span class="font-code-sm text-label-sm text-on-surface-variant">Toll-Free IBCC Desk</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          If your FBISE or Provincial Board data displays mismatch errors, contact our institutional clearance cell:
+        </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-code-sm text-label-sm text-primary flex flex-col gap-1">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Direct Helpline:</span>
+<span class="font-bold">0800-226787</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Email:</span>
+<span class="font-bold">docket@pakcampusassess.edu.pk</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Response Window:</span>
+<span class="text-secondary font-semibold">&lt; 4 Hours</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Document Audit Trail & Cryptographic Verification -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary-container/40 backdrop-blur-sm hidden" id="audit-trail-modal" role="dialog">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full p-space-lg shadow-xl relative animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-start justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Cryptographic Audit Trail</h3>
+<span class="font-code-sm text-label-sm text-on-surface-variant" id="audit-docket-id">Docket: SSC-184920</span>
+</div>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="closeAuditModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm mb-space-lg">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-primary">
+<span class="font-semibold">Document SHA-256 Checksum</span>
+<span class="font-code-sm text-secondary">MATCH CONFIRMED</span>
+</div>
+<p class="font-code-sm text-label-sm text-on-surface-variant break-all">
+            4a9f7312bba71e09c8d356fe8a78019a1290bbce8f9120de840938bc1a74281f
+          </p>
+</div>
+<div class="relative pl-6 space-y-4">
+<!-- Timeline point 1 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="font-label-md text-label-md text-primary font-semibold">Automated IBCC Central Hub Ingestion</div>
+<div class="font-code-sm text-label-sm text-on-surface-variant">Jan 14, 2027 • 10:42 AM PKT</div>
+<p class="text-on-surface-variant mt-0.5">Scanned against Federal Board Master Register Gazette 2023. Matric Roll No: 184920 confirmed in Computer Science discipline.</p>
+</div>
+<!-- Timeline point 2 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="font-label-md text-label-md text-primary font-semibold">NADRA Identity Match</div>
+<div class="font-code-sm text-label-sm text-on-surface-variant">Jan 14, 2027 • 10:44 AM PKT</div>
+<p class="text-on-surface-variant mt-0.5">Candidate Name 'Ayesha Siddiqui' matches Smart B-Form registry (Father: Muhammad Tariq Siddiqui).</p>
+</div>
+<!-- Timeline point 3 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="font-label-md text-label-md text-primary font-semibold">Tier-4 Permanent Seal Issued</div>
+<div class="font-code-sm text-label-sm text-on-surface-variant">Jan 14, 2027 • 11:02 AM PKT</div>
+<p class="text-on-surface-variant mt-0.5">Document locked for applicant edits. Available to licensed universities on central admission portal.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-code-sm text-label-sm text-on-surface-variant">Certified by Controller of Examinations</span>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium hover:bg-primary-container transition-colors" onclick="closeAuditModal()" type="button">
+          Dismiss Docket
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript handling modal and simulated file upload micro-interactions -->
+<script>
+    function openAuditModal(docketId) {
+      const modal = document.getElementById('audit-trail-modal');
+      const label = document.getElementById('audit-docket-id');
+      if (label) label.textContent = 'Docket: ' + docketId;
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+    }
+
+    function closeAuditModal() {
+      const modal = document.getElementById('audit-trail-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    // Micro-interaction for Drag & Drop and File selection simulation
+    const fileInput = document.getElementById('hssc-file-input');
+    const dropZone = document.getElementById('drop-zone');
+    const uploadFeedback = document.getElementById('upload-feedback');
+    const uploadPercent = document.getElementById('upload-percent');
+    const uploadStatus = document.getElementById('upload-status-text');
+
+    if (fileInput && dropZone) {
+      fileInput.addEventListener('change', function(e) {
+        if (this.files && this.files[0]) {
+          const file = this.files[0];
+          uploadFeedback.classList.remove('hidden');
+          uploadStatus.textContent = 'Uploading ' + file.name + ' & hashing...';
+          uploadPercent.textContent = '35%';
+
+          setTimeout(() => {
+            uploadStatus.textContent = 'Checking FBISE Part-II Gazette & Principal Stamp OCR...';
+            uploadPercent.textContent = '78%';
+          }, 900);
+
+          setTimeout(() => {
+            uploadStatus.textContent = file.name + ' successfully staged for verification.';
+            uploadPercent.textContent = 'Done';
+            uploadFeedback.classList.add('bg-secondary-container');
+            uploadStatus.classList.add('text-on-secondary-container');
+          }, 1800);
+        }
+      });
+
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.add('bg-surface-container-high');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('bg-surface-container-high');
+        }, false);
+      });
+    }
+  </script>
+</div></main></div></body></html>
