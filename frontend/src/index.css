@@ -1,19 +1,189 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --color-academic-navy: #082135;
-  --color-dark-navy: #20364B;
-  --color-forest-green: #3B6751;
-  --color-soft-sage: #BAEBCF;
-  --color-canvas: #F6F9FF;
-  --color-surface: #FFFFFF;
-  --color-surface-soft: #EDF4FE;
-  --color-surface-muted: #E7EFF8;
-  --color-border: #E7EFF8;
-  --color-text: #151C23;
-  --color-text-muted: #43474C;
+@theme {
+  --color-primary: #082135;
+  --color-primary-container: #20364B;
+  --color-on-primary: #FFFFFF;
+  --color-on-primary-container: #899FB8;
+  --color-primary-fixed: #CFE5FF;
+  --color-primary-fixed-dim: #B2C9E3;
+  --color-on-primary-fixed: #041D31;
+  --color-on-primary-fixed-variant: #33495E;
+  --color-inverse-primary: #B2C9E3;
+
+  --color-secondary: #3B6751;
+  --color-secondary-container: #BAEBCF;
+  --color-on-secondary: #FFFFFF;
+  --color-on-secondary-container: #3F6B55;
+  --color-secondary-fixed: #BDEDD2;
+  --color-secondary-fixed-dim: #A2D1B6;
+  --color-on-secondary-fixed: #002113;
+  --color-on-secondary-fixed-variant: #234F3B;
+
+  --color-tertiary: #19211D;
+  --color-tertiary-container: #2E3631;
+  --color-on-tertiary: #FFFFFF;
+  --color-on-tertiary-container: #979F99;
+  --color-tertiary-fixed: #DCE4DE;
+  --color-tertiary-fixed-dim: #C0C8C2;
+  --color-on-tertiary-fixed: #161D19;
+  --color-on-tertiary-fixed-variant: #414944;
+
+  --color-surface: #F6F9FF;
+  --color-surface-dim: #D3DBE4;
+  --color-surface-bright: #F6F9FF;
+  --color-surface-variant: #DBE3EC;
+  --color-surface-tint: #4B6077;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #EDF4FE;
+  --color-surface-container: #E7EFF8;
+  --color-surface-container-high: #E1E9F2;
+  --color-surface-container-highest: #DBE3EC;
+
+  --color-on-surface: #151C23;
+  --color-on-surface-variant: #43474C;
+  --color-inverse-surface: #293138;
+  --color-inverse-on-surface: #EAF2FB;
+
+  --color-outline: #74777D;
+  --color-outline-variant: #C3C7CD;
+  --color-border-hairline: #E7EFF8;
+
+  --color-error: #BA1A1A;
+  --color-error-container: #FFDAD6;
+  --color-on-error: #FFFFFF;
+  --color-on-error-container: #93000A;
+
+  --color-background: #F6F9FF;
+  --color-on-background: #151C23;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-gutter: 1rem;
+  --spacing-gutter-desktop: 1.5rem;
+  --spacing-margin: 1rem;
+  --spacing-margin-tablet: 1.5rem;
+  --spacing-margin-desktop: 2rem;
+
+  --font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Explicit Stitch typography utility classes */
+.font-headline-xl {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.font-headline-lg {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+.font-headline-md {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.font-label-md {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.font-label-sm {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.font-code-sm {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+.text-headline-xl {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.text-headline-lg {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.text-headline-md {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-body-lg {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.text-body-md {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-body-sm {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.text-label-md {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.text-label-sm {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.text-code-sm {
+  font-size: 12px;
+  line-height: 16px;
 }
 
 @layer base {
@@ -21,15 +191,16 @@
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: #F6F9FF;
-    color: var(--color-text);
-    font-family: 'Public Sans', 'Segoe UI', sans-serif;
+    background-color: #F6F9FF;
+    color: #151C23;
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     line-height: 1.5;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
   }
 
   #root {
@@ -75,7 +246,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-surface-soft);
+  background: #EDF4FE;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -85,20 +256,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #74777D;
-}
-
-.app-shell {
-  min-height: 100vh;
-  background: var(--color-canvas);
-}
-
-.app-content {
-  background: var(--color-canvas);
-}
-
-.page-section-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(32, 54, 75, 0.04);
 }

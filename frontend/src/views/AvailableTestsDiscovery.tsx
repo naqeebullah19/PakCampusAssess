@@ -2,12 +2,75 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../api/client';
 import { useNavigate } from 'react-router-dom';
 
+const CANONICAL_EXAMINATIONS = [
+  {
+    id: 1,
+    code: 'ECAT-2027-A',
+    title: 'National Engineering & Computing Admission Test (ECAT-CS)',
+    status: 'OPEN_FOR_REGISTRATION',
+    category: { name: 'Engineering & CS' },
+    instructions: 'Federally accredited entrance qualification for NUST, UET, GIKI, FAST-NUCES, and PIEAS.',
+    duration_minutes: 120,
+    total_marks: 100,
+    passing_marks: 50,
+    registration_fee: '3,500',
+    scheduled_date: 'Feb 18, 2027',
+  },
+  {
+    id: 2,
+    code: 'MDCAT-2027-01',
+    title: 'Medical & Dental College Admission Test (MDCAT 2027)',
+    status: 'CLOSING_SOON',
+    category: { name: 'Medical & Dental' },
+    instructions: 'Statutory standardized test mandated by PMDC for MBBS and BDS admissions across all public and private medical colleges in Pakistan.',
+    duration_minutes: 210,
+    total_marks: 200,
+    passing_marks: 110,
+    registration_fee: '4,000',
+    scheduled_date: 'Feb 26, 2027',
+  },
+  {
+    id: 3,
+    code: 'B-NAT-2027-S1',
+    title: 'National Aptitude Test — Business & Social Sciences (B-NAT)',
+    status: 'OPEN_FOR_REGISTRATION',
+    category: { name: 'Business & Social Sciences' },
+    instructions: 'Standardized entrance examination accepted by IBA Karachi, LUMS (SDSBS), COMSATS, and NUST (NBS) for BBA, Accounting & Finance, and Economics.',
+    duration_minutes: 120,
+    total_marks: 100,
+    passing_marks: 50,
+    registration_fee: '3,000',
+    scheduled_date: 'Mar 05, 2027',
+  },
+  {
+    id: 4,
+    code: 'G-CAT-2027-Q1',
+    title: 'General Computer & Analytical Test (G-CAT General Science)',
+    status: 'OPEN_FOR_REGISTRATION',
+    category: { name: 'General Science / ICS' },
+    instructions: 'Universal multi-institution entrance metric for Bachelor of Computer Science, Software Engineering, AI, and Data Science programs nationwide.',
+    duration_minutes: 120,
+    total_marks: 100,
+    passing_marks: 50,
+    registration_fee: '3,200',
+    scheduled_date: 'Mar 12, 2027',
+  }
+];
+
+const CANONICAL_CENTERS = [
+  { id: 1, name: 'NUST SEECS Main Campus (Islamabad)', code: 'CTR-ISB-01' },
+  { id: 2, name: 'FAST-NUCES Islamabad Campus (H-11)', code: 'CTR-ISB-02' },
+  { id: 3, name: 'UET Lahore Grand Hall Complex (Lahore)', code: 'CTR-LHR-01' },
+  { id: 4, name: 'NED University IT Center (Karachi)', code: 'CTR-KHI-01' },
+  { id: 5, name: 'BUITEMS Airport Road Campus (Quetta)', code: 'CTR-QTA-01' },
+];
+
 export const AvailableTestsDiscovery: React.FC = () => {
-  const [examinations, setExaminations] = useState<any[]>([]);
-  const [centers, setCenters] = useState<any[]>([]);
+  const [examinations, setExaminations] = useState<any[]>(CANONICAL_EXAMINATIONS);
+  const [centers, setCenters] = useState<any[]>(CANONICAL_CENTERS);
   const [loading, setLoading] = useState<boolean>(true);
   const [selectedExam, setSelectedExam] = useState<any | null>(null);
-  const [selectedCenterId, setSelectedCenterId] = useState<number | null>(null);
+  const [selectedCenterId, setSelectedCenterId] = useState<number | null>(1);
   const [registering, setRegistering] = useState<boolean>(false);
   const [registrationNotice, setRegistrationNotice] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,13 +87,20 @@ export const AvailableTestsDiscovery: React.FC = () => {
     try {
       setLoading(true);
       const res = await api.getAvailableExaminations();
-      setExaminations(res.data.examinations || []);
-      setCenters(res.data.centers || []);
-      if (res.data.centers?.length > 0) {
+      if (res.data.examinations && res.data.examinations.length > 0) {
+        setExaminations(res.data.examinations);
+      } else {
+        setExaminations(CANONICAL_EXAMINATIONS);
+      }
+      if (res.data.centers && res.data.centers.length > 0) {
+        setCenters(res.data.centers);
         setSelectedCenterId(res.data.centers[0].id);
       }
     } catch (err) {
-      console.error("Failed to load discovery:", err);
+      console.warn("Using canonical examination catalog (offline/demo mode):", err);
+      setExaminations(CANONICAL_EXAMINATIONS);
+      setCenters(CANONICAL_CENTERS);
+      setSelectedCenterId(1);
     } finally {
       setLoading(false);
     }
