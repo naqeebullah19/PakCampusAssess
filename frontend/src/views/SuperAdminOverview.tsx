@@ -16,7 +16,7 @@ export const SuperAdminOverview: React.FC = () => {
   const loadOverview = async () => {
     try {
       setLoading(true);
-      const res = await api.getAdminOverview();
+      const res = await api.getSuperAdminOverview();
       setData(res.data);
     } catch (err) {
       console.error("Failed to load admin overview:", err);
@@ -29,21 +29,21 @@ export const SuperAdminOverview: React.FC = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-3">
         <span className="material-symbols-outlined text-[36px] text-secondary animate-spin">sync</span>
-        <span className="font-label-md text-label-md text-on-surface-variant">Aggregating National Admissions Telemetry...</span>
+        <span className="font-label-md text-label-md text-on-surface-variant font-medium">Aggregating National Admissions Telemetry...</span>
       </div>
     );
   }
 
   const { kpis, centers = [], recent_incidents = [], audit_logs = [] } = data || {
     kpis: {
-      total_candidates: 148920,
-      total_registrations: 148920,
-      active_sessions: 18,
-      candidates_testing: 6412,
-      completed_attempts: 94280,
-      total_centers: 42,
-      operational_centers: 42,
-      open_incidents: 2
+      total_candidates: 0,
+      total_registrations: 0,
+      active_sessions: 0,
+      candidates_testing: 0,
+      completed_attempts: 0,
+      total_centers: 0,
+      operational_centers: 0,
+      open_incidents: 0
     }
   };
 
@@ -72,14 +72,14 @@ export const SuperAdminOverview: React.FC = () => {
             <span>Export National Report</span>
           </button>
           <Link
-            to="/admin/merit-policies"
+            to="/super-admin/results"
             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary text-label-md font-label-md hover:bg-surface-container-high transition-colors shadow-sm border border-outline-variant/30"
           >
             <span className="material-symbols-outlined text-[17px] text-on-surface-variant">rule</span>
-            <span>Generate Merit List</span>
+            <span>Manage Merit &amp; Results</span>
           </Link>
           <Link
-            to="/admin/seat-allocation"
+            to="/super-admin/exam-sessions"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-secondary text-on-secondary text-label-md font-label-md hover:opacity-95 shadow-sm transition-all active:scale-[0.99]"
           >
             <span className="material-symbols-outlined text-[18px]">add_circle</span>

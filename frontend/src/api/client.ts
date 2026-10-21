@@ -153,6 +153,8 @@ export interface UniversityApplicationItem {
 export const api = {
   // Auth
   getCurrentUser: () => apiClient.get<{ user: User; is_authenticated: boolean }>('/auth/me/'),
+  login: (username: string, password?: string) => apiClient.post<{ message: string; user: User; role: string; is_authenticated: boolean }>('/auth/login/', { username, password }),
+  logout: () => apiClient.post<{ message: string; is_authenticated: boolean }>('/auth/logout/'),
   switchRole: (role: string) => apiClient.post('/auth/switch-role/', { role }),
 
   // Candidate
@@ -172,8 +174,35 @@ export const api = {
     apiClient.post('/cbt/save-answer/', data),
   submitCBTExam: (attempt_id: number) => apiClient.post('/cbt/submit/', { attempt_id }),
 
-  // Super Admin
-  getAdminOverview: () => apiClient.get<SuperAdminOverviewData>('/admin/overview/'),
+  // Super Admin - Dedicated Platform Routes
+  getSuperAdminOverview: () => apiClient.get<any>('/super-admin/overview/'),
+  getSuperAdminExaminations: () => apiClient.get<any>('/super-admin/examinations/'),
+  createSuperAdminExamination: (data: any) => apiClient.post('/super-admin/examinations/', data),
+  getSuperAdminCategories: () => apiClient.get<any>('/super-admin/exam-categories/'),
+  createSuperAdminCategory: (data: any) => apiClient.post('/super-admin/exam-categories/', data),
+  getSuperAdminQuestionBank: () => apiClient.get<any>('/super-admin/question-bank/'),
+  createSuperAdminQuestion: (data: any) => apiClient.post('/super-admin/question-bank/', data),
+  approveSuperAdminQuestion: (question_id: number) => apiClient.post('/super-admin/question-bank/', { action: 'approve', question_id }),
+  getSuperAdminExamSessions: () => apiClient.get<any>('/super-admin/exam-sessions/'),
+  createSuperAdminExamSession: (data: any) => apiClient.post('/super-admin/exam-sessions/', data),
+  getSuperAdminCenters: () => apiClient.get<any>('/super-admin/centers/'),
+  createSuperAdminCenter: (data: any) => apiClient.post('/super-admin/centers/', data),
+  getSuperAdminUsers: () => apiClient.get<any>('/super-admin/users/'),
+  updateCandidateVerification: (candidate_id: number, nadra_status: string) => apiClient.post('/super-admin/users/', { candidate_id, nadra_status }),
+  getSuperAdminStaff: () => apiClient.get<any>('/super-admin/staff/'),
+  updateStaffRole: (user_id: number, role: string, institution_id?: number) => apiClient.post('/super-admin/staff/', { user_id, role, institution_id }),
+  getSuperAdminMonitoring: () => apiClient.get<any>('/super-admin/monitoring/'),
+  resolveIncident: (incident_id: number, status: string, resolution_notes?: string) => apiClient.post('/super-admin/monitoring/', { incident_id, status, resolution_notes }),
+  getSuperAdminResults: () => apiClient.get<any>('/super-admin/results/'),
+  publishResults: (examination_id: number) => apiClient.post('/super-admin/results/', { action: 'publish', examination_id }),
+  getSuperAdminUniversities: () => apiClient.get<any>('/super-admin/universities/'),
+  createSuperAdminUniversity: (data: any) => apiClient.post('/super-admin/universities/', data),
+  getSuperAdminAdmissions: () => apiClient.get<any>('/super-admin/admissions/'),
+  updateSuperAdminApplicationStatus: (application_id: number, status: string, verification_notes?: string) => apiClient.post('/super-admin/admissions/', { application_id, status, verification_notes }),
+  getSuperAdminReports: () => apiClient.get<any>('/super-admin/reports/'),
+  getSuperAdminAuditLogs: () => apiClient.get<any>('/super-admin/audit-logs/'),
+  getSuperAdminSettings: () => apiClient.get<any>('/super-admin/settings/'),
+  updateSuperAdminSettings: (data: any) => apiClient.post('/super-admin/settings/', data),
 
   // Merit Policies
   getMeritPolicies: () => apiClient.get<MeritPolicy[]>('/merit/policies/'),
@@ -186,7 +215,8 @@ export const api = {
   submitFacultyReview: (data: { application_id: number; academic_score: number; test_score: number; recommendation: string; notes: string }) =>
     apiClient.post('/faculty/submit-review/', data),
 
-  // Infrastructure & Live Operations Consoles
+  // Infrastructure & Live Operations Consoles (Legacy & Reference)
+  getAdminOverview: () => apiClient.get<SuperAdminOverviewData>('/super-admin/overview/'),
   getIPAuthorizationData: () => apiClient.get<any>('/admin/ip-authorization/'),
   getSeatAllocationData: () => apiClient.get<any>('/admin/seat-allocation/'),
   getLiveMonitoringData: () => apiClient.get<any>('/admin/live-monitoring/'),
@@ -194,4 +224,5 @@ export const api = {
 };
 
 export const pakCampusApi = api;
+
 

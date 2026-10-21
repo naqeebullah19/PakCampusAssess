@@ -7,7 +7,9 @@ from api.models import (
     ExaminationRegistration, AdmitCard, Question, QuestionOption,
     ExaminationBlueprint, CandidateAttempt, CandidateAnswer, CandidateResult,
     MeritPolicy, MeritList, MeritListEntry, UniversityApplication,
-    ApplicationProgramPreference, FacultyReview, OperationalIncident, AuditLog
+    MeritPolicy, MeritList, MeritListEntry, UniversityApplication,
+    ApplicationProgramPreference, FacultyReview, OperationalIncident, AuditLog,
+    SessionStaffAssignment, CandidateAttendance, SessionReport, StaffNotification
 )
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -278,3 +280,75 @@ class AuditLogSerializer(serializers.ModelSerializer):
 
     def get_actor_name(self, obj):
         return obj.actor.get_full_name() if obj.actor else "System"
+
+class CandidateResultSerializer(serializers.ModelSerializer):
+    candidate_name = serializers.SerializerMethodField()
+    candidate_roll_number = serializers.CharField(source='candidate.roll_number', read_only=True)
+    examination_title = serializers.CharField(source='examination.title', read_only=True)
+    examination_code = serializers.CharField(source='examination.code', read_only=True)
+
+    class Meta:
+        model = CandidateResult
+        fields = '__all__'
+
+    def get_candidate_name(self, obj):
+        return obj.candidate.user.get_full_name() if obj.candidate and obj.candidate.user else ""
+
+class AdmissionsCycleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AdmissionsCycle
+        fields = '__all__'
+
+class SessionStaffAssignmentSerializer(serializers.ModelSerializer):
+    staff_name = serializers.SerializerMethodField()
+    staff_email = serializers.CharField(source='user.email', read_only=True)
+    lab_name = serializers.CharField(source='assigned_lab.lab_name', read_only=True)
+
+    class Meta:
+        model = SessionStaffAssignment
+        fields = '__all__'
+
+    def get_staff_name(self, obj):
+        return obj.user.get_full_name() or obj.user.username
+
+class CandidateAttendanceSerializer(serializers.ModelSerializer):
+    candidate_name = serializers.SerializerMethodField()
+    roll_number = serializers.CharField(source='registration.candidate.roll_number', read_only=True)
+    verified_by_name = serializers.SerializerMethodField()
+    workstation_label = serializers.SerializerMethodField()
+
+    class Meta:
+        model = CandidateAttendance
+        fields = '__all__'
+
+    def get_candidate_name(self, obj):
+        candidate = obj.registration.candidate
+        return candidate.user.get_full_name() if candidate and candidate.user else "Candidate"
+
+    def get_verified_by_name(self, obj):
+        return obj.verified_by.get_full_name() if obj.verified_by else ""
+
+    def get_workstation_label(self, obj):
+        if obj.assigned_workstation:
+            return f"{obj.assigned_workstation.laboratory.lab_name} - {obj.assigned_workstation.workstation_number}"
+        return obj.desk_number or "Unassigned"
+
+class SessionReportSerializer(serializers.ModelSerializer):
+    submitted_by_name = serializers.SerializerMethodField()
+    session_title = serializers.SerializerMethodField()
+
+    class Meta:
+        model = SessionReport
+        fields = '__all__'
+
+    def get_submitted_by_name(self, obj):
+        return obj.submitted_by.get_full_name() if obj.submitted_by else "Unassigned"
+
+    def get_session_title(self, obj):
+        return f"{obj.session.examination.code} @ {obj.session.center.code} ({obj.session.session_date})"
+
+class StaffNotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StaffNotification
+        fields = '__all__'
+

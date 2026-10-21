@@ -349,6 +349,76 @@ class AdmitCard(models.Model):
     def __str__(self):
         return f"AdmitCard {self.candidate.roll_number} - {self.session.examination.code}"
 
+class SessionStaffAssignment(models.Model):
+    ROLE_CHOICES = (
+        ('CHIEF_PROCTOR', 'Chief Proctor / Chief Invigilator'),
+        ('PROCTOR', 'Hall Proctor / Invigilator'),
+        ('TECH_SUPPORT', 'IT / Lab Technical Support'),
+        ('VERIFICATION_OFFICER', 'Biometric / ID Verification Officer'),
+    )
+    session = models.ForeignKey(ExaminationSession, on_delete=models.CASCADE, related_name='staff_assignments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='session_assignments')
+    role = models.CharField(max_length=30, choices=ROLE_CHOICES, default='PROCTOR')
+    assigned_lab = models.ForeignKey(Laboratory, on_delete=models.SET_NULL, null=True, blank=True, related_name='assigned_staff')
+    duty_instructions = models.TextField(blank=True, default='')
+    assigned_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('session', 'user')
+
+    def __str__(self):
+        return f"{self.user.get_full_name() or self.user.username} - {self.session} ({self.role})"
+
+class CandidateAttendance(models.Model):
+    STATUS_CHOICES = (
+        ('NOT_ARRIVED', 'Not Arrived'),
+        ('CHECKED_IN', 'Checked In'),
+        ('VERIFY_REQUIRED', 'Identity Verification Required'),
+        ('ADMITTED', 'Admitted to Examination Hall'),
+        ('ABSENT', 'Marked Absent'),
+    )
+    session = models.ForeignKey(ExaminationSession, on_delete=models.CASCADE, related_name='attendances')
+    registration = models.OneToOneField(ExaminationRegistration, on_delete=models.CASCADE, related_name='attendance')
+    status = models.CharField(max_length=25, choices=STATUS_CHOICES, default='NOT_ARRIVED')
+    check_in_time = models.DateTimeField(null=True, blank=True)
+    assigned_workstation = models.ForeignKey(Workstation, on_delete=models.SET_NULL, null=True, blank=True)
+    desk_number = models.CharField(max_length=50, blank=True, default='')
+    verified_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='verified_attendances')
+    verification_notes = models.TextField(blank=True, default='')
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ('session', 'registration')
+
+    def __str__(self):
+        return f"{self.registration.candidate.roll_number} - {self.session} [{self.status}]"
+
+class SessionReport(models.Model):
+    STATUS_CHOICES = (
+        ('DRAFT', 'Draft Report'),
+        ('SUBMITTED', 'Submitted / Sealed'),
+        ('AMENDED', 'Amended with Approval'),
+    )
+    session = models.OneToOneField(ExaminationSession, on_delete=models.CASCADE, related_name='report')
+    submitted_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='submitted_reports')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='DRAFT')
+    actual_start_time = models.TimeField(null=True, blank=True)
+    actual_end_time = models.TimeField(null=True, blank=True)
+    expected_candidates = models.PositiveIntegerField(default=0)
+    present_candidates = models.PositiveIntegerField(default=0)
+    absent_candidates = models.PositiveIntegerField(default=0)
+    technical_incidents_count = models.PositiveIntegerField(default=0)
+    disciplinary_incidents_count = models.PositiveIntegerField(default=0)
+    operational_observations = models.TextField(blank=True, default='')
+    integrity_checklist_confirmed = models.BooleanField(default=False)
+    network_stability_notes = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+    submitted_at = models.DateTimeField(null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Report {self.session} [{self.status}] by {self.submitted_by}"
+
 # ==============================================================================
 # 5. QUESTION BANK, BLUEPRINTS & CBT TEST ENGINE
 # ==============================================================================
@@ -609,6 +679,7 @@ class OperationalIncident(models.Model):
     laboratory = models.ForeignKey(Laboratory, on_delete=models.SET_NULL, null=True, blank=True)
     workstation = models.ForeignKey(Workstation, on_delete=models.SET_NULL, null=True, blank=True)
     candidate_attempt = models.ForeignKey(CandidateAttempt, on_delete=models.SET_NULL, null=True, blank=True)
+    candidate = models.ForeignKey(CandidateProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='reported_incidents')
     title = models.CharField(max_length=200)
     category = models.CharField(max_length=100) # e.g. "Workstation Replacement", "Network Latency Spike", "Biometric Mismatch"
     severity = models.CharField(max_length=20, choices=SEVERITY_CHOICES, default='MEDIUM')
@@ -636,3 +707,25 @@ class AuditLog(models.Model):
 
     def __str__(self):
         return f"{self.timestamp.strftime('%Y-%m-%d %H:%M:%S')} | {self.actor} | {self.action}"
+
+class StaffNotification(models.Model):
+    PRIORITY_CHOICES = (
+        ('INFO', 'Information'),
+        ('WARNING', 'Operational Warning'),
+        ('URGENT', 'Urgent Attention Required'),
+    )
+    recipient = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notifications')
+    title = models.CharField(max_length=200)
+    message = models.TextField()
+    priority = models.CharField(max_length=20, choices=PRIORITY_CHOICES, default='INFO')
+    category = models.CharField(max_length=50, default='SYSTEM')
+    related_session = models.ForeignKey(ExaminationSession, on_delete=models.SET_NULL, null=True, blank=True)
+    destination_url = models.CharField(max_length=255, blank=True, default='')
+    is_read = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"[{self.priority}] {self.title} -> {self.recipient.username}"

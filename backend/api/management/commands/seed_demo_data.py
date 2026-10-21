@@ -10,7 +10,8 @@ from api.models import (
     ExaminationRegistration, AdmitCard, Question, QuestionOption,
     ExaminationBlueprint, CandidateAttempt, CandidateAnswer, CandidateResult,
     MeritPolicy, MeritList, MeritListEntry, UniversityApplication,
-    ApplicationProgramPreference, FacultyReview, OperationalIncident, AuditLog
+    ApplicationProgramPreference, FacultyReview, OperationalIncident, AuditLog,
+    SessionStaffAssignment, CandidateAttendance, SessionReport, StaffNotification
 )
 
 class Command(BaseCommand):
@@ -151,6 +152,39 @@ class Command(BaseCommand):
             user=examiner_user,
             defaults={"role": UserRole.INVIGILATOR, "institution": nust, "is_verified": True}
         )
+
+        controller_user, _ = User.objects.get_or_create(
+            username="controller@pakcampusassess.edu.pk",
+            defaults={
+                "first_name": "Prof. Zahid",
+                "last_name": "Iqbal",
+                "email": "controller@pakcampusassess.edu.pk",
+                "is_staff": True
+            }
+        )
+        controller_user.set_password("ControllerPass2027!")
+        controller_user.save()
+        UserProfile.objects.get_or_create(
+            user=controller_user,
+            defaults={"role": UserRole.EXAM_CONTROLLER, "phone_number": "0300-5566778", "is_verified": True}
+        )
+
+        admissions_admin_user, _ = User.objects.get_or_create(
+            username="admissions@nust.edu.pk",
+            defaults={
+                "first_name": "Mrs. Samina",
+                "last_name": "Bilal",
+                "email": "admissions@nust.edu.pk",
+                "is_staff": True
+            }
+        )
+        admissions_admin_user.set_password("AdmissionsPass2027!")
+        admissions_admin_user.save()
+        UserProfile.objects.get_or_create(
+            user=admissions_admin_user,
+            defaults={"role": UserRole.UNIVERSITY_ADMIN, "institution": nust, "phone_number": "0331-4433221", "is_verified": True}
+        )
+
 
         # 5. Candidate User: Ayesha Siddiqui (as seen in Stitch designs)
         cand_user, _ = User.objects.get_or_create(
@@ -343,6 +377,152 @@ class Command(BaseCommand):
                 "desk_number": "Desk #118",
                 "qr_token": uuid.UUID("3f82169b-2a78-43d9-95cb-64f33190a421"),
                 "status": "ISSUED"
+            }
+        )
+
+        # Proctor Assignment: Assign examiner_user (proctor@nust.edu.pk) to session_02
+        SessionStaffAssignment.objects.get_or_create(
+            session=session_02,
+            user=examiner_user,
+            defaults={
+                "role": "CHIEF_PROCTOR",
+                "assigned_lab": lab_b,
+                "duty_instructions": "Oversee morning session ECAT CBT testing in Lab B. Verify admit cards and monitor live workstation telemetry."
+            }
+        )
+
+        # Unassigned Examination Session (to test object-level authorization & denial)
+        center_lhr, _ = ExaminationCenter.objects.get_or_create(
+            code="CTR-LHR-02",
+            defaults={
+                "name": "UET Lahore Main Campus Testing Center",
+                "city": "Lahore",
+                "province": "Punjab",
+                "address": "Grand Trunk Rd, Staff Houses Engineering University Lahore",
+                "authorized_ip_range": "10.20.4.0/24",
+                "total_capacity": 500,
+                "readiness_status": "READY"
+            }
+        )
+        session_unassigned, _ = ExaminationSession.objects.get_or_create(
+            examination=exam_ecat,
+            center=center_lhr,
+            session_date=date(2027, 2, 22),
+            shift="AFTERNOON",
+            defaults={
+                "session_number": 3,
+                "reporting_time": time(13, 30),
+                "start_time": time(14, 0),
+                "end_time": time(16, 0),
+                "max_seats": 300,
+                "allocated_seats": 0
+            }
+        )
+
+        # Candidate Attendance for Ayesha Siddiqui
+        CandidateAttendance.objects.get_or_create(
+            session=session_02,
+            registration=cand_reg,
+            defaults={
+                "status": "CHECKED_IN",
+                "check_in_time": timezone.now() - timedelta(minutes=45),
+                "assigned_workstation": ws_118,
+                "desk_number": "Desk #118",
+                "verified_by": examiner_user,
+                "verification_notes": "Identity and biometric verified against NADRA Smart Card."
+            }
+        )
+
+        # Second Candidate: Bilal Khan
+        bilal_user, _ = User.objects.get_or_create(
+            username="candidate@pakcampusassess.edu.pk",
+            defaults={
+                "first_name": "Bilal",
+                "last_name": "Khan",
+                "email": "candidate@pakcampusassess.edu.pk"
+            }
+        )
+        bilal_user.set_password("CandidatePass2027!")
+        bilal_user.save()
+        UserProfile.objects.get_or_create(
+            user=bilal_user,
+            defaults={"role": UserRole.CANDIDATE, "phone_number": "0301-9876543", "is_verified": True}
+        )
+        bilal_profile, _ = CandidateProfile.objects.get_or_create(
+            user=bilal_user,
+            defaults={
+                "roll_number": "CA-2027-01053",
+                "cnic": "61101-9876543-1",
+                "father_name": "Tariq Khan",
+                "date_of_birth": date(2006, 8, 12),
+                "gender": "MALE",
+                "domicile_district": "Rawalpindi",
+                "domicile_province": "Punjab",
+                "permanent_address": "House 12, Satellite Town, Rawalpindi",
+                "current_address": "House 12, Satellite Town, Rawalpindi",
+                "nadRA_verification_status": "VERIFIED",
+                "completion_percentage": 90
+            }
+        )
+        bilal_reg, _ = ExaminationRegistration.objects.get_or_create(
+            candidate=bilal_profile,
+            examination=exam_ecat,
+            defaults={
+                "preferred_center": center_isb,
+                "assigned_session": session_02,
+                "challan_number": "CHL-2027-088193",
+                "fee_status": "VERIFIED",
+                "fee_amount": 3000.00,
+                "registration_status": "SEAT_ASSIGNED"
+            }
+        )
+        CandidateAttendance.objects.get_or_create(
+            session=session_02,
+            registration=bilal_reg,
+            defaults={
+                "status": "NOT_ARRIVED",
+                "desk_number": "Desk #119"
+            }
+        )
+
+        # Staff Notifications for Proctor
+        StaffNotification.objects.get_or_create(
+            recipient=examiner_user,
+            title="Duty Assignment: ECAT-CS Session #2",
+            defaults={
+                "message": "You have been designated Chief Proctor for Lab B, NUST Sector H-12 Campus on Feb 18, 2027.",
+                "priority": "URGENT",
+                "category": "EXAM_ASSIGNMENT",
+                "related_session": session_02,
+                "destination_url": "/proctor/sessions"
+            }
+        )
+        StaffNotification.objects.get_or_create(
+            recipient=examiner_user,
+            title="Biometric Gateway Alpha Sync Verified",
+            defaults={
+                "message": "Biometric verification gateways in Lab B have synced with NADRA identity mirror.",
+                "priority": "INFO",
+                "category": "SYSTEM",
+                "related_session": session_02,
+                "destination_url": "/proctor/monitoring"
+            }
+        )
+
+        # Draft Session Report for session_02
+        SessionReport.objects.get_or_create(
+            session=session_02,
+            defaults={
+                "submitted_by": examiner_user,
+                "status": "DRAFT",
+                "actual_start_time": time(8, 30),
+                "expected_candidates": 2,
+                "present_candidates": 1,
+                "absent_candidates": 1,
+                "technical_incidents_count": 1,
+                "operational_observations": "Session initiated smoothly. One minor display cable reseat on Desk 118 resolved before testing window commenced.",
+                "integrity_checklist_confirmed": True,
+                "network_stability_notes": "Zero packet drops observed on local CBT intranet cluster."
             }
         )
 
